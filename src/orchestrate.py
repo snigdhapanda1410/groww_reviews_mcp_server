@@ -193,7 +193,7 @@ def run_pipeline(
     logger.info("Stage 3 complete: Pulse formatted successfully (%d words, limit <= 250).", word_count)
 
     # ── Stage 4: MCP Google Docs Delivery ─────────────────────────────────────
-    doc_id = os.getenv("GOOGLE_DOC_ID") or cfg.get("mcp", {}).get("google_doc_id", "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms")
+    doc_id = os.getenv("GOOGLE_DOC_ID") or cfg.get("mcp", {}).get("google_doc_id", "1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM")
     doc_url: str | None = None
     docs_result: dict[str, Any] = {}
 

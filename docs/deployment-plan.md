@@ -32,7 +32,7 @@ flowchart TD
         PLAYSTORE["Google Play Store API\n(google-play-scraper)\ncom.nextbillion.groww"]
         GEMINI["Google Gemini 1.5 Pro\n(gemini-api)"]
         MCP_SERVER["Remote MCP Server\n(mcpservergroww.vercel.app)\nTools: append_to_google_doc, send_email"]
-        GDOC["Google Doc\n1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"]
+        GDOC["Google Doc\n1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM"]
         GMAIL["Gmail Service\nStakeholder Email Notification"]
     end
 
@@ -69,7 +69,7 @@ flowchart TD
 | **Scheduled Pipeline** | **Railway** | Cron Worker (Every Mon 07:30 IST) | `python src/orchestrate.py` | Internal (Background Worker) |
 | **Frontend UI** | **Vercel** | Static Site + API Rewrites | `index.html` + `vercel.json` | `https://groww-reviews-pulse.vercel.app` |
 | **Remote MCP Server** | **Vercel** | Serverless Streamable HTTP | Python/TypeScript MCP | `https://mcpservergroww.vercel.app/mcp` |
-| **Target Document** | **Google Docs**| Cloud Document | MCP Append Tool | ID: `1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms` |
+| **Target Document** | **Google Docs**| Cloud Document | MCP Append Tool | ID: `1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM` |
 
 ---
 
@@ -126,7 +126,7 @@ Configure the following environment variables in the Railway Web Console under *
 | `PYTHONUNBUFFERED` | Yes | `1` | Ensures real-time console log streaming |
 | `MCP_SERVER_URL` | Optional | `https://mcpservergroww.vercel.app/mcp` | Remote MCP SSE endpoint |
 | `MCP_HEALTH_URL` | Optional | `https://mcpservergroww.vercel.app/health` | Pre-flight health endpoint |
-| `GOOGLE_DOC_ID` | Optional | `1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms` | Stakeholder Google Doc ID |
+| `GOOGLE_DOC_ID` | Optional | `1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM` | Stakeholder Google Doc ID |
 | `EMAIL_TO` | Optional | `stakeholders@groww.in` | Target stakeholder email address |
 
 ### 4.3 — Persistent Volume (Optional but Recommended)
@@ -346,7 +346,7 @@ sequenceDiagram
 ```
 
 ### Validation Steps:
-1. **Header Action Check:** Click **"Open Google Doc"** in the top navigation bar. Verify it navigates to document [`1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms`](https://docs.google.com/document/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit).
+1. **Header Action Check:** Click **"Open Google Doc"** in the top navigation bar. Verify it navigates to document [`1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM`](https://docs.google.com/document/d/1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM/edit).
 2. **Prose Copy Check:** Click **"Copy Pulse Prose"** in the MCP Delivery Hub card. Confirm clipboard contains the formatted 214-word note and animated toast confirms.
 3. **Table Filter Check:** Click `1-Star (37)`, `2-Star (2)`, `3-Star (9)`, `4-5 Star (32)` pills and test keyword search (e.g. `adapter`, `font`). Confirm counts and filtered rows update instantly.
 4. **Execution Telemetry Check:** Click **"Run Weekly Pipeline"**. Confirm modal shows 5 green steps and provides direct link to updated Google Doc.

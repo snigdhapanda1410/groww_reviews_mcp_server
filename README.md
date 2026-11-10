@@ -34,7 +34,7 @@ python src/orchestrate.py
 | **Python** | `3.11+` | Runtime environment (`.venv`) |
 | **LLM Provider** | Google Gemini 1.5 Pro | Theme clustering, quote selection, action idea generation |
 | **Remote MCP Server** | [`mcpservergroww.vercel.app`](https://mcpservergroww.vercel.app) | Streamable HTTP MCP server exposing Google Docs and Gmail tools |
-| **Google Doc** | ID: `1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms` | Continuous weekly pulse living document |
+| **Google Doc** | ID: `1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM` | Continuous weekly pulse living document |
 
 ---
 
@@ -81,7 +81,7 @@ pulse:
 mcp:
   server_url: "https://mcpservergroww.vercel.app/mcp"
   health_url: "https://mcpservergroww.vercel.app/health"
-  google_doc_id: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"
+  google_doc_id: "1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM"
 
 delivery:
   email_to: "you@example.com"           # Target stakeholder recipient
@@ -149,7 +149,7 @@ python src/serve.py
 - **Executive KPI Ribbon:** Reviews Ingested (80), 100% Sanitized filters (>8 Words, Emojis Strip, English, 0 PII), 5 Discovered Clusters, and Executive Length Budget Gauge (214 / 250 words max).
 - **Top 3 Voice of Customer (VoC) Themes:** Ranked product themes with verbatim quotes, star ratings, metadata tags, and volume/severity sorting.
 - **PM Recommended Action Plan:** Concrete next steps starting with capitalized verbs (`FIX`, `IMPROVE`, `STREAMLINE`) with sprint checkboxes and engineering squad owners.
-- **MCP Delivery Hub:** Direct link to living Google Doc (`1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms`), stakeholder Gmail notification status, and one-click "Copy Pulse Prose" button with animated feedback toast.
+- **MCP Delivery Hub:** Direct link to living Google Doc (`1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM`), stakeholder Gmail notification status, and one-click "Copy Pulse Prose" button with animated feedback toast.
 - **Interactive Ingestion Stream Table:** Explore and filter all 80 cleaned reviews by star rating (`All (80)`, `1-Star (37)`, `2-Star (2)`, `3-Star (9)`, `4-5 Star (32)`) with instant keyword search and theme badges.
 - **Pipeline Execution Console Modal:** Click "Dry Run" or "Run Weekly Pipeline" to open an in-browser telemetry console streaming live stage progression.
 

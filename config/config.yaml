@@ -28,7 +28,7 @@ pulse:
 mcp:
   server_url: "https://mcpservergroww.vercel.app/mcp"
   health_url: "https://mcpservergroww.vercel.app/health"
-  google_doc_id: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"   # Target Google Doc ID or URL to append pulse
+  google_doc_id: "1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM"   # Target Google Doc ID or URL to append pulse
   docs_server: "google-workspace-mcp"   # Logical server name
   gmail_server: "google-workspace-mcp"  # Logical server name
 

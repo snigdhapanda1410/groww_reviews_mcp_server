@@ -67,7 +67,7 @@ def build():
             "tag_classes": tag_classes,
         })
 
-    doc_id = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"
+    doc_id = "1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM"
     doc_url = f"https://docs.google.com/document/d/{doc_id}/edit"
 
     base_html = stitch_html.read_text(encoding="utf-8")
@@ -638,7 +638,7 @@ def build():
           setStep('stepPulse', 'done');
           setStep('stepDocs', 'active');
           if (isDryRun) {
-            logToTerminal('[DRY-RUN] Simulating Google Docs append (1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms)...', 'text-secondary');
+            logToTerminal('[DRY-RUN] Simulating Google Docs append (1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM)...', 'text-secondary');
           } else {
             logToTerminal('Connecting to MCP server at https://mcpservergroww.vercel.app/mcp...', 'text-secondary');
           }
@@ -670,10 +670,10 @@ def build():
           logToTerminal(`Generated pulse note: ${data.result.word_count || 214} words (<= 250 word budget satisfied).`, 'text-primary');
 
           if (isDryRun) {
-            logToTerminal('[DRY-RUN] Would append pulse to Google Doc: ' + (data.result.doc_url || '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms'), 'text-secondary');
+            logToTerminal('[DRY-RUN] Would append pulse to Google Doc: ' + (data.result.doc_url || '1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM'), 'text-secondary');
             logToTerminal('[DRY-RUN] Would dispatch Gmail notification to stakeholders.', 'text-secondary');
           } else {
-            logToTerminal('Google Doc updated: ' + (data.result.doc_url || '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms'), 'text-primary font-bold');
+            logToTerminal('Google Doc updated: ' + (data.result.doc_url || '1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM'), 'text-primary font-bold');
             logToTerminal('Gmail notification sent (Message ID: ' + (data.result.message_id || 'sent') + ')', 'text-primary');
           }
 
@@ -709,7 +709,7 @@ def build():
         logToTerminal('Clustered 5 themes via Groq: Order Execution, UI Usability, Charts & TA.', 'text-primary');
         logToTerminal('Executive Pulse formatted: 214 words (Word budget <= 250 satisfied).', 'text-primary');
         if (isDryRun) {
-          logToTerminal('[DRY-RUN] Simulated append to Google Doc: 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms', 'text-secondary');
+          logToTerminal('[DRY-RUN] Simulated append to Google Doc: 1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM', 'text-secondary');
           logToTerminal('[DRY-RUN] Simulated Gmail dispatch to stakeholders@groww.in', 'text-secondary');
         } else {
           logToTerminal('Live delivery notice: ' + err.message, 'text-amber-400');
