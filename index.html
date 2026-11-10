@@ -41,8 +41,100 @@
       <span>Open Google Doc</span>
       <span class="material-symbols-outlined text-[13px] text-outline">open_in_new</span>
     </a>
-    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1 shadow-[0_0_10px_rgba(0,208,156,0.2)]">
-      <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+    <div class="relative ml-1">
+      <button id="userProfileBtn" type="button" aria-expanded="false" aria-haspopup="true" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,208,156,0.3)] hover:scale-105 hover:shadow-[0_0_16px_rgba(0,208,156,0.5)] transition-all cursor-pointer border border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/50" title="Operator Profile & Connection Status">
+        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </button>
+
+      <!-- Profile & Connections Dropdown Popover -->
+      <div id="userProfileDropdown" class="hidden absolute right-0 mt-3 w-80 sm:w-96 rounded-2xl bg-surface-container-low/95 backdrop-blur-xl border border-white/[0.12] shadow-[0_20px_50px_rgba(0,0,0,0.85)] z-50 p-4 space-y-4">
+        <!-- Identity Header -->
+        <div class="flex items-center gap-3 pb-3 border-b border-white/[0.08]">
+          <div class="relative">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-on-primary font-headline-sm text-[14px] shadow-[0_0_12px_rgba(68,237,183,0.4)]">
+              TP
+            </div>
+            <span class="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-400 border-2 border-surface-container-low ring-1 ring-emerald-500/50"></span>
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="font-headline-sm text-body-md text-on-surface font-semibold truncate">Groww Pulse Operator</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] font-label-caps bg-primary/10 text-primary border border-primary/20">Admin</span>
+            </div>
+            <p class="font-telemetry-code text-[12px] text-on-surface-variant truncate font-mono">tinapanda1410@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Google Workspace Connection -->
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-outline font-label-caps text-[11px] uppercase tracking-wider">
+            <span>Google Workspace Services</span>
+            <span class="text-primary flex items-center gap-1 font-semibold">
+              <span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span> Connected
+            </span>
+          </div>
+          <div class="grid grid-cols-1 gap-2">
+            <!-- Gmail Dispatch Target -->
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container border border-white/[0.04]">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <span class="material-symbols-outlined text-rose-400 text-[18px]">mail</span>
+                <div class="min-w-0">
+                  <p class="font-headline-sm text-body-sm text-on-surface font-medium leading-tight">Gmail Dispatch</p>
+                  <p class="font-telemetry-code text-[11px] text-outline truncate font-mono">tinapanda1410@gmail.com</p>
+                </div>
+              </div>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-label-caps font-semibold">Verified</span>
+            </div>
+
+            <!-- Target Google Doc -->
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container border border-white/[0.04]">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <span class="material-symbols-outlined text-blue-400 text-[18px]">description</span>
+                <div class="min-w-0">
+                  <p class="font-headline-sm text-body-sm text-on-surface font-medium leading-tight">Target Google Doc</p>
+                  <p class="font-telemetry-code text-[11px] text-outline truncate font-mono">1CQmm-g8D41RmTRK...</p>
+                </div>
+              </div>
+              <a href="https://docs.google.com/document/d/1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM/edit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] font-telemetry-code text-primary hover:underline font-medium">
+                <span>View</span>
+                <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MCP Remote Orchestrator Status -->
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-outline font-label-caps text-[11px] uppercase tracking-wider">
+            <span>Remote MCP Orchestrator</span>
+            <span class="text-secondary font-mono text-[10px]" id="dropdownMcpPing">Operational</span>
+          </div>
+          <div class="p-3 rounded-xl bg-surface-container-lowest border border-white/[0.06] space-y-2">
+            <div class="flex items-center justify-between text-body-sm">
+              <span class="text-outline font-telemetry-code text-[11px]">Server:</span>
+              <span class="font-mono text-on-surface text-[11px] font-medium truncate max-w-[180px]">mcpservergroww.vercel.app</span>
+            </div>
+            <div class="flex items-center justify-between text-body-sm">
+              <span class="text-outline font-telemetry-code text-[11px]">OAuth2 Auth:</span>
+              <span class="flex items-center gap-1 font-telemetry-code text-[11px] text-emerald-400 font-medium">
+                <span class="material-symbols-outlined text-[14px]">verified</span> Active (Token Loaded)
+              </span>
+            </div>
+            <div class="flex items-center justify-between text-body-sm">
+              <span class="text-outline font-telemetry-code text-[11px]">MCP Tools:</span>
+              <span class="font-mono text-[11px] text-primary">append_to_doc • send_email</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popover Footer Action -->
+        <div class="pt-1 flex items-center justify-between gap-2 border-t border-white/[0.06]">
+          <button id="refreshMcpStatusBtn" type="button" class="w-full flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-xl bg-white/[0.04] hover:bg-surface-container-high text-on-surface hover:text-primary transition-all font-body-sm text-[12px] border border-white/[0.08] cursor-pointer">
+            <span class="material-symbols-outlined text-[14px]">refresh</span>
+            <span>Check Live MCP Health</span>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -1890,6 +1982,77 @@
     if (modalLiveRunBtn) modalLiveRunBtn.addEventListener('click', () => executePipeline(false));
     if (closeModalBtn) closeModalBtn.addEventListener('click', () => modal.classList.add('hidden'));
     if (modalDismissBtn) modalDismissBtn.addEventListener('click', () => modal.classList.add('hidden'));
+
+    // ── 6. User Profile Popover & Live MCP Health Ping ───────────────────────
+    const userProfileBtn = document.getElementById('userProfileBtn');
+    const userProfileDropdown = document.getElementById('userProfileDropdown');
+    const refreshMcpStatusBtn = document.getElementById('refreshMcpStatusBtn');
+    const dropdownMcpPing = document.getElementById('dropdownMcpPing');
+
+    if (userProfileBtn && userProfileDropdown) {
+      userProfileBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = userProfileDropdown.classList.contains('hidden');
+        if (isHidden) {
+          userProfileDropdown.classList.remove('hidden');
+          userProfileBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          userProfileDropdown.classList.add('hidden');
+          userProfileBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Close when clicking anywhere outside
+      document.addEventListener('click', (e) => {
+        if (!userProfileDropdown.contains(e.target) && !userProfileBtn.contains(e.target)) {
+          userProfileDropdown.classList.add('hidden');
+          userProfileBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !userProfileDropdown.classList.contains('hidden')) {
+          userProfileDropdown.classList.add('hidden');
+          userProfileBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    if (refreshMcpStatusBtn && dropdownMcpPing) {
+      refreshMcpStatusBtn.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        dropdownMcpPing.innerText = 'Checking...';
+        dropdownMcpPing.className = 'text-amber-400 font-mono text-[10px] animate-pulse';
+        const start = Date.now();
+        try {
+          const res = await fetch('/api/status');
+          const elapsed = Date.now() - start;
+          if (res.ok) {
+            dropdownMcpPing.innerText = `Online (${elapsed}ms)`;
+            dropdownMcpPing.className = 'text-emerald-400 font-mono text-[10px] font-semibold';
+          } else {
+            dropdownMcpPing.innerText = `Status ${res.status}`;
+            dropdownMcpPing.className = 'text-amber-400 font-mono text-[10px]';
+          }
+        } catch {
+          try {
+            const res2 = await fetch('https://mcpservergroww.vercel.app/health');
+            const elapsed = Date.now() - start;
+            if (res2.ok) {
+              dropdownMcpPing.innerText = `Online (${elapsed}ms)`;
+              dropdownMcpPing.className = 'text-emerald-400 font-mono text-[10px] font-semibold';
+            } else {
+              dropdownMcpPing.innerText = 'Degraded';
+              dropdownMcpPing.className = 'text-rose-400 font-mono text-[10px]';
+            }
+          } catch {
+            dropdownMcpPing.innerText = 'Offline';
+            dropdownMcpPing.className = 'text-rose-400 font-mono text-[10px]';
+          }
+        }
+      });
+    }
   });
 </script>
 
