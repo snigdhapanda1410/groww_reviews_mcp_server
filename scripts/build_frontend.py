@@ -75,15 +75,14 @@ def build():
 
     base_html = stitch_html.read_text(encoding="utf-8")
 
-    # ── 1. Global Box-Sizing, Visible Custom Scrollbar & Icon Ligatures ──────────
+    # ── 1. Global Box-Sizing, Natural Root Scrolling & Icon Ligatures ──────────
     old_style = '<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>'
     new_style = (
         '<style>'
         '@layer base{'
         '*,*::before,*::after{box-sizing:border-box;}'
-        'html{overflow-y:scroll;scroll-behavior:smooth;}'
-        'html,body{margin:0;padding:0;width:100%;max-width:100vw;overflow-x:hidden;}'
-        'body{overscroll-behavior:none;}'
+        'html{margin:0;padding:0;width:100%;overflow-x:hidden;overflow-y:scroll;scroll-behavior:smooth;}'
+        'body{margin:0;padding:0;width:100%;min-height:100vh;overflow:visible;}'
         'main>:first-child{margin-top:0!important;}'
         'main>:last-child{margin-bottom:0!important;}'
         '}'
@@ -211,10 +210,10 @@ def build():
     if a_start != -1 and a_end != -1:
         base_html = base_html[:a_start] + new_aside + base_html[a_end:]
 
-    # ── 4. Main Wrapper: Enforce min-w-0, box-border, and zero horizontal overflow ──
+    # ── 4. Main Wrapper: Enforce min-w-0, box-border, and unobstructed scrolling ──
     base_html = base_html.replace(
         '<div class="pl-64"><main class="relative pt-16 min-h-screen bg-surface w-full px-gutter-desktop py-space-xl"><div class="flex flex-col w-full space-y-6">',
-        '<div class="pl-60 lg:pl-64 w-full min-w-0 max-w-full overflow-x-hidden box-border"><main class="relative pt-16 min-h-screen bg-surface w-full min-w-0 max-w-full px-4 sm:px-6 lg:px-8 py-6 box-border"><div class="flex flex-col w-full min-w-0 max-w-full space-y-6">'
+        '<div class="pl-60 lg:pl-64 w-full min-w-0 max-w-full box-border"><main class="relative pt-16 min-h-screen bg-surface w-full min-w-0 max-w-full px-4 sm:px-6 lg:px-8 py-6 box-border"><div class="flex flex-col w-full min-w-0 max-w-full space-y-6">'
     )
 
     # ── 5. Section IDs & Grid Wrappers ──────────────────────────────────────────
