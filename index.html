@@ -1,30 +1,94 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#131e8c", "surface-tint": "#2fe0aa", "secondary-container": "#00a6e0", "surface-container-high": "#262a33", "on-secondary-fixed-variant": "#004c69", "primary": "#44edb7", "surface-container-low": "#181c24", "error": "#ffb4ab", "tertiary-container": "#abb2ff", "tertiary-fixed": "#e0e0ff", "on-tertiary-fixed": "#000767", "outline-variant": "#3c4a43", "surface-container-highest": "#31353e", "surface-variant": "#31353e", "primary-fixed-dim": "#2fe0aa", "secondary-fixed-dim": "#7bd0ff", "on-secondary-fixed": "#001e2c", "outline": "#85948c", "on-primary-fixed": "#002116", "surface-container-lowest": "#0a0e16", "on-secondary-container": "#00374d", "inverse-surface": "#dfe2ee", "primary-fixed": "#59fdc5", "primary-container": "#00d09c", "surface-container": "#1c2028", "on-primary-fixed-variant": "#00513b", "error-container": "#93000a", "on-surface": "#dfe2ee", "secondary": "#7bd0ff", "surface-dim": "#0f131c", "on-primary": "#003828", "background": "#0f131c", "on-surface-variant": "#bacac1", "surface": "#0f131c", "on-background": "#dfe2ee", "tertiary": "#cdd0ff", "inverse-on-surface": "#2c3039", "inverse-primary": "#006c4f", "tertiary-fixed-dim": "#bdc2ff", "surface-bright": "#353942", "on-error": "#690005", "on-secondary": "#00354a", "on-tertiary-fixed-variant": "#2f3aa3", "on-error-container": "#ffdad6", "secondary-fixed": "#c4e7ff", "on-tertiary-container": "#313ca4", "on-primary-container": "#00533c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1rem", "space-xs": "0.25rem", "space-md": "0.75rem", "margin": "1rem", "gutter": "1rem", "space-sm": "0.5rem", "gutter-desktop": "1.25rem", "space-xl": "1.5rem", "margin-desktop": "2rem" }, "fontFamily": { "metric-xl": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], "telemetry-code": ["JetBrains Mono"], "body-lg": ["Inter"], "body-md": ["Inter"], "display-hero": ["Plus Jakarta Sans"], "metric-lg": ["JetBrains Mono"], "metric-sm": ["JetBrains Mono"], "headline-sm": ["Plus Jakarta Sans"], "label-caps": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "metric-xl": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "telemetry-code": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "metric-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "metric-sm": ["13px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "display-hero-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_20px_rgba(0,0,0,0.5)]"><div class="w-full h-full px-4 lg:px-6 flex items-center justify-between gap-4"><div class="flex items-center gap-3 shrink-0"><img alt="Groww Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCP06O199GqLlRvd-r4YOXnD6hJu6cP0a8QUhmK_KidRsQc1JMmeC2eZBzFsTH6Lpx9hkyxNNZBCJmiltAyNMHiSxxBRK9yDpDVukLgc1M-CrXG7RkrYMbmBwxIv1oe4qCg94MxCbA8Lc2nr5ZEdIxMFbRfD6R__9cJcfPTwpZUi-kNf9n4Nwrj08i7Wrk5IWNDOtAqxiUIP7ldX-10fLQ3hgWK6W0NSdD4sD51LKY"/><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">Groww</span><span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 uppercase tracking-widest">Reviews Pulse</span></div><div class="h-4 w-px bg-white/[0.08] hidden xl:block"></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container-low border border-white/[0.06]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-telemetry-code text-telemetry-code text-on-surface-variant font-medium">Live Pipeline • Week ending Nov 01, 2026</span></div></div><div class="hidden md:flex items-center gap-3"><button class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low border border-white/[0.08] hover:border-white/[0.16] hover:bg-surface-container transition-all text-on-surface" type="button"><span class="material-symbols-outlined text-secondary text-[16px]">calendar_month</span><span class="font-label-caps text-label-caps text-on-surface">Week Ending: Nov 01, 2026</span><span class="material-symbols-outlined text-on-surface-variant text-[14px]">arrow_drop_down</span></button><div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low border border-white/[0.08]"><span class="h-2 w-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,208,156,0.6)]"></span><span class="font-telemetry-code text-telemetry-code text-on-surface-variant">MCP: <span class="text-on-surface font-mono">mcpservergroww.vercel.app</span></span><span class="font-label-caps text-label-caps text-primary">(Connected)</span></div></div><div class="flex items-center gap-2.5 shrink-0"><button id="dryRunHeaderBtn" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-white/[0.16] text-on-surface transition-all font-headline-sm text-body-md cursor-pointer" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">settings</span><span>Dry Run</span></button><button id="liveRunHeaderBtn" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-md font-semibold hover:bg-primary transition-all shadow-[0_0_16px_rgba(0,208,156,0.35)] cursor-pointer" type="button"><span class="material-symbols-outlined text-[16px]">rocket_launch</span><span>Run Weekly Pipeline</span></button><a class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-primary/40 text-on-surface hover:text-primary transition-all font-body-md text-body-md shadow-sm" href="https://docs.google.com/document/d/1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM/edit" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">description</span><span>Open Google Doc</span><span class="material-symbols-outlined text-[14px]">open_in_new</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1 shadow-[0_0_10px_rgba(0,208,156,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface-container-lowest border-r border-white/[0.08] z-40 flex flex-col justify-between p-4"><div class="flex flex-col gap-6"><div class="px-2"><p class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Intelligence Suites</p></div><nav class="flex flex-col gap-1.5" id="intelligenceSuitesNav">
-<a aria-current="page" class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all bg-surface-container-high text-primary font-semibold border-l-2 border-primary pl-3 cursor-pointer" data-target="executive-pulse" href="#executive-pulse">
-  <span class="material-symbols-outlined text-[20px]">analytics</span>
-  <span class="font-body-md text-body-md">Executive Pulse</span>
-</a>
-<a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="sentiment-radar" href="#sentiment-radar">
-  <span class="material-symbols-outlined text-[20px]">radar</span>
-  <span class="font-body-md text-body-md">Sentiment Radar</span>
-</a>
-<a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="reviews-stream" href="#reviews-stream">
-  <span class="material-symbols-outlined text-[20px]">dynamic_feed</span>
-  <span class="font-body-md text-body-md">Reviews Stream</span>
-</a>
-<a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="feature-telemetry" href="#feature-telemetry">
-  <span class="material-symbols-outlined text-[20px]">tune</span>
-  <span class="font-body-md text-body-md">Feature Telemetry</span>
-</a>
-<a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="mcp-orchestration" href="#mcp-orchestration">
-  <span class="material-symbols-outlined text-[20px]">terminal</span>
-  <span class="font-body-md text-body-md">MCP Orchestrator</span>
-</a>
-</nav></div><div class="p-3 rounded-xl bg-surface-container-low border border-white/[0.06] flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-outline">Sync Cycle #148</span><span class="h-1.5 w-1.5 rounded-full bg-primary"></span></div><div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-4/5 shadow-[0_0_6px_rgba(68,237,183,0.8)]"></div></div><p class="font-telemetry-code text-telemetry-code text-on-surface-variant">Next automated scrape in 22h</p></div><div class="pt-2"><a href="https://docs.google.com/document/d/1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM/edit" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container border border-white/[0.08] hover:border-primary/40 transition-all text-on-surface group cursor-pointer shadow-sm"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">description</span><span class="font-body-sm text-body-sm font-medium">Open in Google Docs</span></div><span class="material-symbols-outlined text-[14px] text-outline group-hover:text-primary">open_in_new</span></a></div></aside><div class="pl-64"><main class="relative pt-16 min-h-screen bg-surface w-full px-gutter-desktop py-space-xl"><div class="flex flex-col w-full space-y-6">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{*,*::before,*::after{box-sizing:border-box;}html,body{margin:0;padding:0;width:100%;max-width:100vw;overflow-x:hidden;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#131e8c", "surface-tint": "#2fe0aa", "secondary-container": "#00a6e0", "surface-container-high": "#262a33", "on-secondary-fixed-variant": "#004c69", "primary": "#44edb7", "surface-container-low": "#181c24", "error": "#ffb4ab", "tertiary-container": "#abb2ff", "tertiary-fixed": "#e0e0ff", "on-tertiary-fixed": "#000767", "outline-variant": "#3c4a43", "surface-container-highest": "#31353e", "surface-variant": "#31353e", "primary-fixed-dim": "#2fe0aa", "secondary-fixed-dim": "#7bd0ff", "on-secondary-fixed": "#001e2c", "outline": "#85948c", "on-primary-fixed": "#002116", "surface-container-lowest": "#0a0e16", "on-secondary-container": "#00374d", "inverse-surface": "#dfe2ee", "primary-fixed": "#59fdc5", "primary-container": "#00d09c", "surface-container": "#1c2028", "on-primary-fixed-variant": "#00513b", "error-container": "#93000a", "on-surface": "#dfe2ee", "secondary": "#7bd0ff", "surface-dim": "#0f131c", "on-primary": "#003828", "background": "#0f131c", "on-surface-variant": "#bacac1", "surface": "#0f131c", "on-background": "#dfe2ee", "tertiary": "#cdd0ff", "inverse-on-surface": "#2c3039", "inverse-primary": "#006c4f", "tertiary-fixed-dim": "#bdc2ff", "surface-bright": "#353942", "on-error": "#690005", "on-secondary": "#00354a", "on-tertiary-fixed-variant": "#2f3aa3", "on-error-container": "#ffdad6", "secondary-fixed": "#c4e7ff", "on-tertiary-container": "#313ca4", "on-primary-container": "#00533c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1rem", "space-xs": "0.25rem", "space-md": "0.75rem", "margin": "1rem", "gutter": "1rem", "space-sm": "0.5rem", "gutter-desktop": "1.25rem", "space-xl": "1.5rem", "margin-desktop": "2rem" }, "fontFamily": { "metric-xl": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], "telemetry-code": ["JetBrains Mono"], "body-lg": ["Inter"], "body-md": ["Inter"], "display-hero": ["Plus Jakarta Sans"], "metric-lg": ["JetBrains Mono"], "metric-sm": ["JetBrains Mono"], "headline-sm": ["Plus Jakarta Sans"], "label-caps": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "metric-xl": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "telemetry-code": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "metric-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "metric-sm": ["13px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "display-hero-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+<div class="w-full h-full px-4 lg:px-6 flex items-center justify-between gap-2 sm:gap-4 box-border">
+  <!-- Brand & Status -->
+  <div class="flex items-center gap-3 shrink-0">
+    <img alt="Groww Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCP06O199GqLlRvd-r4YOXnD6hJu6cP0a8QUhmK_KidRsQc1JMmeC2eZBzFsTH6Lpx9hkyxNNZBCJmiltAyNMHiSxxBRK9yDpDVukLgc1M-CrXG7RkrYMbmBwxIv1oe4qCg94MxCbA8Lc2nr5ZEdIxMFbRfD6R__9cJcfPTwpZUi-kNf9n4Nwrj08i7Wrk5IWNDOtAqxiUIP7ldX-10fLQ3hgWK6W0NSdD4sD51LKY"/>
+    <div class="flex items-center gap-2">
+      <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">Groww</span>
+      <span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 uppercase tracking-widest hidden sm:inline">Reviews Pulse</span>
+    </div>
+    <div class="hidden 2xl:flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container-low border border-white/[0.06]">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+      </span>
+      <span class="font-telemetry-code text-telemetry-code text-on-surface-variant font-medium">Live Pipeline • w/e Nov 01, 2026</span>
+    </div>
+  </div>
+
+  <!-- Center Status Badges (Visible on larger screens) -->
+  <div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low border border-white/[0.08]">
+    <span class="h-2 w-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,208,156,0.6)]"></span>
+    <span class="font-telemetry-code text-telemetry-code text-on-surface-variant">MCP: <span class="text-on-surface font-mono">mcpservergroww.vercel.app</span></span>
+    <span class="font-label-caps text-label-caps text-primary">(Connected)</span>
+  </div>
+
+  <!-- Primary Header Actions -->
+  <div class="flex items-center gap-2 shrink-0">
+    <button id="dryRunHeaderBtn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-white/[0.16] text-on-surface transition-all font-body-sm text-body-sm cursor-pointer" type="button">
+      <span class="material-symbols-outlined text-[16px] text-on-surface-variant">settings</span>
+      <span>Dry Run</span>
+    </button>
+    <button id="liveRunHeaderBtn" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary transition-all shadow-[0_0_16px_rgba(0,208,156,0.35)] cursor-pointer" type="button">
+      <span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+      <span>Run Weekly Pipeline</span>
+    </button>
+    <a href="https://docs.google.com/document/d/1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM/edit" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-primary/40 text-on-surface hover:text-primary transition-all font-body-sm text-body-sm shadow-sm cursor-pointer">
+      <span class="material-symbols-outlined text-[16px] text-primary">description</span>
+      <span>Open Google Doc</span>
+      <span class="material-symbols-outlined text-[13px] text-outline">open_in_new</span>
+    </a>
+    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1 shadow-[0_0_10px_rgba(0,208,156,0.2)]">
+      <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+    </div>
+  </div>
+</div>
+</header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-60 lg:w-64 bg-surface-container-lowest border-r border-white/[0.08] z-40 flex flex-col justify-between p-4 overflow-y-auto">
+  <div class="flex flex-col gap-5">
+    <div class="px-2">
+      <p class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Intelligence Suites</p>
+    </div>
+    <nav class="flex flex-col gap-1.5" id="intelligenceSuitesNav">
+      <a aria-current="page" class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all bg-surface-container-high text-primary font-semibold border-l-2 border-primary pl-3 cursor-pointer" data-target="executive-pulse" href="#executive-pulse">
+        <span class="material-symbols-outlined text-[20px]">analytics</span>
+        <span class="font-body-md text-body-md">Executive Pulse</span>
+      </a>
+      <a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="sentiment-radar" href="#sentiment-radar">
+        <span class="material-symbols-outlined text-[20px]">radar</span>
+        <span class="font-body-md text-body-md">Sentiment Radar</span>
+      </a>
+      <a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="reviews-stream" href="#reviews-stream">
+        <span class="material-symbols-outlined text-[20px]">dynamic_feed</span>
+        <span class="font-body-md text-body-md">Reviews Stream</span>
+      </a>
+      <a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="feature-telemetry" href="#feature-telemetry">
+        <span class="material-symbols-outlined text-[20px]">tune</span>
+        <span class="font-body-md text-body-md">Feature Telemetry</span>
+      </a>
+      <a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="mcp-orchestration" href="#mcp-orchestration">
+        <span class="material-symbols-outlined text-[20px]">terminal</span>
+        <span class="font-body-md text-body-md">MCP Orchestrator</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Bottom Sync Status Card (Clean & uncluttered) -->
+  <div class="p-3 rounded-xl bg-surface-container-low border border-white/[0.06] flex flex-col gap-2">
+    <div class="flex items-center justify-between">
+      <span class="font-label-caps text-label-caps text-outline">Sync Cycle #148</span>
+      <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+    </div>
+    <div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+      <div class="h-full bg-primary rounded-full w-4/5 shadow-[0_0_6px_rgba(68,237,183,0.8)]"></div>
+    </div>
+    <p class="font-telemetry-code text-telemetry-code text-on-surface-variant">Next automated scrape in 22h</p>
+  </div>
+</aside><div class="pl-60 lg:pl-64 w-full min-w-0 max-w-full overflow-x-hidden box-border"><main class="relative pt-16 min-h-screen bg-surface w-full min-w-0 max-w-full px-4 sm:px-6 lg:px-8 py-6 box-border"><div class="flex flex-col w-full min-w-0 max-w-full space-y-6">
 <!-- TOP KPI RIBBON (4-COLUMN HIGH DENSITY) -->
-<section id="executive-pulse" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 scroll-mt-20">
+<section id="executive-pulse" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 scroll-mt-20 w-full min-w-0">
 <!-- Card 1: Reviews Ingested -->
 <div class="relative overflow-hidden rounded-xl bg-surface-container-low p-4 shadow-xl group hover:bg-surface-container transition-all duration-200">
 <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
@@ -116,7 +180,7 @@
 </section>
 
 <!-- SENTIMENT RADAR & RATING HEALTH SUITE -->
-<section id="sentiment-radar" class="rounded-xl bg-surface-container-low p-5 shadow-xl space-y-4 border border-white/[0.04] scroll-mt-20">
+<section id="sentiment-radar" class="rounded-xl bg-surface-container-low p-5 shadow-xl space-y-4 border border-white/[0.04] scroll-mt-20 w-full min-w-0">
   <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
     <div class="flex items-center gap-2.5">
       <span class="material-symbols-outlined text-primary text-[22px]">radar</span>
@@ -136,9 +200,9 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pt-1">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pt-1 w-full min-w-0">
     <!-- Star Rating Distribution Histogram -->
-    <div class="lg:col-span-7 bg-surface-container p-4 rounded-xl space-y-3">
+    <div class="lg:col-span-7 min-w-0 bg-surface-container p-4 rounded-xl space-y-3">
       <div class="flex items-center justify-between">
         <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Star Rating Breakdown</span>
         <span class="font-telemetry-code text-telemetry-code text-on-surface-variant">Weighted Avg: 2.87 / 5.0</span>
@@ -188,7 +252,7 @@
     </div>
 
     <!-- Polarity Quadrants -->
-    <div class="lg:col-span-5 flex flex-col justify-between gap-2.5">
+    <div class="lg:col-span-5 min-w-0 flex flex-col justify-between gap-2.5">
       <div class="bg-surface-container p-3 rounded-xl space-y-1.5 border-l-2 border-primary">
         <div class="flex items-center justify-between">
           <span class="font-label-caps text-label-caps text-primary uppercase font-bold">Positive Sentiment (40.0%)</span>
@@ -223,9 +287,9 @@
 </section>
 
 <!-- MAIN SPLIT: VOC THEMES (60%) vs ACTION PLAN & MCP (40%) -->
-<div id="feature-telemetry" class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start scroll-mt-20">
+<div id="feature-telemetry" class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start scroll-mt-20 w-full min-w-0">
 <!-- LEFT PANEL: Top Ranked Product Themes & Voice of Customer (7 cols / ~60%) -->
-<div class="lg:col-span-7 flex flex-col space-y-4">
+<div class="lg:col-span-7 min-w-0 flex flex-col space-y-4">
 <div class="flex items-center justify-between bg-surface-container-low px-4 py-3 rounded-xl shadow-md">
 <div class="flex items-center gap-2.5">
 <span class="material-symbols-outlined text-primary text-[20px]">insights</span>
@@ -346,7 +410,7 @@
 </div>
 </div>
 <!-- RIGHT PANEL: Action Plan & MCP Hub (5 cols / ~40%) -->
-<div class="lg:col-span-5 flex flex-col space-y-4">
+<div class="lg:col-span-5 min-w-0 flex flex-col space-y-4">
 <!-- Recommended PM Actions -->
 <div class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-3.5">
 <div class="flex items-center justify-between">
@@ -480,7 +544,7 @@
 </div>
 </div>
 <!-- BOTTOM SECTION: RAW CLEANED INGESTION DATA EXPLORER -->
-<section id="reviews-stream" class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-4 scroll-mt-20">
+<section id="reviews-stream" class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-4 scroll-mt-20 w-full min-w-0">
 <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-primary text-[24px]">database</span>
@@ -508,7 +572,7 @@
 </div>
 <!-- Dense Data Table -->
 <div class="overflow-x-auto rounded-lg bg-surface-container-lowest">
-<table class="w-full text-left font-body-sm text-body-sm">
+<table class="w-full text-left font-body-sm text-body-sm table-fixed">
 <thead class="bg-surface-container text-outline font-label-caps text-label-caps uppercase tracking-wider">
 <tr>
 <th class="py-2.5 px-4 font-semibold">Date</th>
@@ -520,880 +584,880 @@
 </thead>
 <tbody class="divide-y divide-white/[0.04]" id="reviewsTableBody">
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback sorry for the rating but you deserve this ! your app is the worst app ever from now i am going to use another platform because of not allotting my ips 2 3 times i applied on jio i applied on bls but at the end of allotting i always face disappointment with your platform." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-31 09:10</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"sorry for the rating but you deserve this ! your app is the worst app ever from now I am going to use another platform because of not allotting my ips 2 3 times I applied on jio i applied on BLS but at the end of allotting i always face disappointment with your platform."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-31 09:10</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"sorry for the rating but you deserve this ! your app is the worst app ever from now I am going to use another platform because of not allotting my ips 2 3 times I applied on jio i applied on BLS but at the end of allotting i always face disappointment with your platform."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability very good and user friendly app. almost two years of use, no concern rise." data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-31 09:11</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"very good and user friendly app. almost two years of use, no concern rise."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-31 09:11</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"very good and user friendly app. almost two years of use, no concern rise."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability best app user friendly for 1st time user and very simple to use for new investers" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-31 09:12</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"best app user friendly for 1st time user and very simple to use for new investers"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-31 09:12</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"best app user friendly for 1st time user and very simple to use for new investers"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Account &amp; KYC you can&#x27;t force me to permission setting you can&#x27;t force me to share pan card you can&#x27;t force me to send 1 in your account it is wrong if i want to buy ipo i will do but you can&#x27;t force me" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:13</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"you can&#x27;t force me to permission setting you can&#x27;t force me to share pan card you can&#x27;t force me to send 1 in your account it is wrong if I want to buy ipo i will do but you can&#x27;t force me"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-tertiary-container/20 text-tertiary">Account & KYC</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:13</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"you can&#x27;t force me to permission setting you can&#x27;t force me to share pan card you can&#x27;t force me to send 1 in your account it is wrong if I want to buy ipo i will do but you can&#x27;t force me"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-tertiary-container/20 text-tertiary">Account & KYC</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charts &amp; TA charts are not opening even in a good network. it is showing failed to load." data-rating="3">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:14</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Charts are not opening even in a good network. It is showing failed to load."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:14</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Charts are not opening even in a good network. It is showing failed to load."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback my life turning point this app .. fandamental analysis very important so carefully invest..." data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:15</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"my life turning point this app .. fandamental analysis very important so carefully invest..."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:15</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"my life turning point this app .. fandamental analysis very important so carefully invest..."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability groww is very useful &amp; best app in india" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:16</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Groww is very useful &amp; Best app in India"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:16</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Groww is very useful &amp; Best app in India"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability the grow app is a simple and easy user interface," data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:17</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"The grow app is a simple and easy user interface,"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:17</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"The grow app is a simple and easy user interface,"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution not good. doesn&#x27;t let you modify your order in hurry." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:18</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"not good. doesn&#x27;t let you modify your order in hurry."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:18</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"not good. doesn&#x27;t let you modify your order in hurry."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Account &amp; KYC mutual funds mismatch. even after submitting cams statements multiple times, their mutual funds display is always wrong. i mailed them a dozen times in last 20 days. very very incompetent customer service" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:19</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"mutual funds mismatch. even after submitting CAMS statements multiple times, Their mutual funds display is always wrong. I mailed them a dozen times in last 20 days. Very very incompetent customer service"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-tertiary-container/20 text-tertiary">Account & KYC</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:19</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"mutual funds mismatch. even after submitting CAMS statements multiple times, Their mutual funds display is always wrong. I mailed them a dozen times in last 20 days. Very very incompetent customer service"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-tertiary-container/20 text-tertiary">Account & KYC</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charges &amp; SIP super app in share market and sips one of the best" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:20</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"super app in share market and sips one of the best"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:20</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"super app in share market and sips one of the best"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charges &amp; SIP absolutely scam high brokerage charge and oposite direction trade status today market is down but now is going point its scam app dot trust" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:21</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"absolutely scam high brokerage charge and oposite direction trade status today Market is down but now is going point its scam app dot trust"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:21</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"absolutely scam high brokerage charge and oposite direction trade status today Market is down but now is going point its scam app dot trust"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability good , very simple to new user , but the problem is when i want to buy some stock then suddenly it can&#x27;t , something slow down so improve should be there" data-rating="4">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:22</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"good , very simple to new user , but the problem is when I want to buy some stock then suddenly it can&#x27;t , something slow down so improve should be there"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:22</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"good , very simple to new user , but the problem is when I want to buy some stock then suddenly it can&#x27;t , something slow down so improve should be there"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback worst app... i thought my mobile was slow.. actually this app is slow for trading.." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:23</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"worst app... i thought my mobile was slow.. actually this app is slow for trading.."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:23</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"worst app... i thought my mobile was slow.. actually this app is slow for trading.."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback i aa tyyfdt ty to the poster for the m z" data-rating="4">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:24</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"I aa tyyfdt ty to the poster for THE m z"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:24</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"I aa tyyfdt ty to the poster for THE m z"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charges &amp; SIP the poorest service provider, i opened a sip account in 2019 and want to redeem it but the platform is pending it since one year, helpless feeling." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:25</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"The poorest service provider, I opened a SIP account in 2019 and want to redeem it but the platform is pending it since one year, Helpless feeling."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:25</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"The poorest service provider, I opened a SIP account in 2019 and want to redeem it but the platform is pending it since one year, Helpless feeling."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charts &amp; TA everything in option &amp; chain was going well before update and the candle and line chart in my app is not getting sync, the candle chart is now getting worse to predict just bcoz it&#x27;s not getting sync with line chart..." data-rating="3">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:26</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Everything in option &amp; chain was going well before update and the candle and line chart in my app is not getting sync, the candle chart is now getting worse to predict just bcoz it&#x27;s not getting sync with line chart..."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:26</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Everything in option &amp; chain was going well before update and the candle and line chart in my app is not getting sync, the candle chart is now getting worse to predict just bcoz it&#x27;s not getting sync with line chart..."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback can you add distance filters for 10/50/100/200 sma/ema and 52wk/all time high low from ltp/cmp eg. filter all stocks where ltp/cmp is +/-3% from their 20 ema" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:27</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"can you add distance filters for 10/50/100/200 sma/ema and 52wk/all time high low from LTP/CMP Eg. Filter all stocks where LTP/CMP is +/-3% from their 20 EMA"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:27</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"can you add distance filters for 10/50/100/200 sma/ema and 52wk/all time high low from LTP/CMP Eg. Filter all stocks where LTP/CMP is +/-3% from their 20 EMA"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution best described as scam..they are closing intra day targets and stop loss as per their convenience...those who want to loss money can try" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:28</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"best described as scam..They are closing intra day targets and stop loss as per their convenience...Those who want to loss money can try"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:28</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"best described as scam..They are closing intra day targets and stop loss as per their convenience...Those who want to loss money can try"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution sometimes by placed order cannot shows me nd while i try to end my bulk trade there is some glitch . rest is bes" data-rating="4">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:29</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"sometimes by placed order cannot shows me Nd while i try to end my bulk trade there is some glitch . rest is bes"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:29</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"sometimes by placed order cannot shows me Nd while i try to end my bulk trade there is some glitch . rest is bes"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability groww app is very good app and useful app" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:30</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"groww app is very good app and useful app"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:30</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"groww app is very good app and useful app"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution i have incurred a financial loss because the exit button did not function properly. i would like to know who will be held responsible for this loss. i have already reported the issue via email, but i have not received any response or resolution so far. please look into this matter urgently, clarify who is responsible, and provide a proper explanation and resolution for the financial loss i have suffered due to this technical issue." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:31</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"I have incurred a financial loss because the Exit button did not function properly. I would like to know who will be held responsible for this loss. I have already reported the issue via email, but I have not received any response or resolution so far. Please look into this matter urgently, clarify who is responsible, and provide a proper explanation and resolution for the financial loss I have suffered due to this technical issue."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:31</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"I have incurred a financial loss because the Exit button did not function properly. I would like to know who will be held responsible for this loss. I have already reported the issue via email, but I have not received any response or resolution so far. Please look into this matter urgently, clarify who is responsible, and provide a proper explanation and resolution for the financial loss I have suffered due to this technical issue."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability using groww for almost 3 months. smooth experience, easy to use and beginner-friendly. overall, very good app!" data-rating="4">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:32</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Using Groww for almost 3 months. Smooth experience, easy to use and beginner-friendly. Overall, very good app!"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:32</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Using Groww for almost 3 months. Smooth experience, easy to use and beginner-friendly. Overall, very good app!"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability groww is a user-friendly app with a smooth interface for investing in stocks, mutual funds, and ipos. the platform is convenient and beginner-friendly. however, app performance and customer support could be improved. overall, a great investment app!" data-rating="4">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:33</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Groww is a user-friendly app with a smooth interface for investing in stocks, mutual funds, and IPOs. The platform is convenient and beginner-friendly. However, app performance and customer support could be improved. Overall, a great investment app!"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:33</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Groww is a user-friendly app with a smooth interface for investing in stocks, mutual funds, and IPOs. The platform is convenient and beginner-friendly. However, app performance and customer support could be improved. Overall, a great investment app!"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback i love this app . never seen market insights before on any application since 2014 when i entered in this market. great.." data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:34</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"I love this app . Never seen market insights before on any application since 2014 when I entered in this market. Great.."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:34</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"I love this app . Never seen market insights before on any application since 2014 when I entered in this market. Great.."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback mutual fund locking system is wrong. starting investing money date is important. after investing money date is not important." data-rating="3">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:35</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Mutual fund locking system is wrong. Starting investing money date is important. After investing money date is not important."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-30 09:35</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Mutual fund locking system is wrong. Starting investing money date is important. After investing money date is not important."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability this app very excellent and more knowledgeable and very easy conversation to other&#x27;s" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:36</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"This app very excellent and more knowledgeable and very easy conversation to other&#x27;s"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:36</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"This app very excellent and more knowledgeable and very easy conversation to other&#x27;s"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution today my selling order not working adaptar removed massage seen so i have money lose" data-rating="2">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:37</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★☆☆☆ <span class="ml-1 text-outline">2.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"today my selling order not working adaptar removed massage seen so i have money lose"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:37</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★☆☆☆ <span class="ml-1 text-outline">2.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"today my selling order not working adaptar removed massage seen so i have money lose"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability happy with groww, easy to use, invest and read the stock." data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:38</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Happy with Groww, Easy to use, invest and read the stock."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:38</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Happy with Groww, Easy to use, invest and read the stock."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback when sbi bank will be available to add fund in us wallet" data-rating="4">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:39</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"when sbi bank will be available to add fund in us wallet"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:39</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"when sbi bank will be available to add fund in us wallet"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution too much technical glitch all the time . sometimes it won&#x27;t allow you to exit from the trade. this is very concerning" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:40</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Too much technical glitch all the time . sometimes it won&#x27;t allow you to exit from the trade. This is very concerning"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:40</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Too much technical glitch all the time . sometimes it won&#x27;t allow you to exit from the trade. This is very concerning"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback this is the worst app ever. nobody should download it." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:41</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"This is the worst app ever. Nobody should download it."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:41</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"This is the worst app ever. Nobody should download it."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution the groww app frequently freezes during trading hours, causing inconvenience and potential financial losses. every second matters in trading, and delays can lead to missed opportunities. despite contacting customer support multiple times, i was repeatedly advised to reinstall the app. i followed their instructions, but the issue persisted. groww must fix these technical problems, improve app stability,customers deserve a reliable trading platform and lasting solutions, not repeated generic advic" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:42</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"The Groww app frequently freezes during trading hours, causing inconvenience and potential financial losses. Every second matters in trading, and delays can lead to missed opportunities. Despite contacting customer support multiple times, I was repeatedly advised to reinstall the app. I followed their instructions, but the issue persisted. Groww must fix these technical problems, improve app stability,Customers deserve a reliable trading platform and lasting solutions, not repeated generic advic"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:42</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"The Groww app frequently freezes during trading hours, causing inconvenience and potential financial losses. Every second matters in trading, and delays can lead to missed opportunities. Despite contacting customer support multiple times, I was repeatedly advised to reinstall the app. I followed their instructions, but the issue persisted. Groww must fix these technical problems, improve app stability,Customers deserve a reliable trading platform and lasting solutions, not repeated generic advic"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback the ipo upi request sucks, neither i get a ipo upi request to approve nor a notification" data-rating="3">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:43</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"The ipo upi request sucks, neither I get a IPO upi request to approve nor a notification"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:43</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"The ipo upi request sucks, neither I get a IPO upi request to approve nor a notification"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution screen keeps hanging and incurred me losses due to delay in order execution with an error adapter has disconnected" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:44</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"screen keeps hanging and incurred me losses due to delay in order execution with an error adapter has disconnected"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:44</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"screen keeps hanging and incurred me losses due to delay in order execution with an error adapter has disconnected"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability easy to handle and understanding but brokrage is high" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:45</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"easy to handle and understanding but brokrage is high"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:45</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"easy to handle and understanding but brokrage is high"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback options trading is nothing but a scam that tricks people into losing their money.”" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:46</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Options trading is nothing but a scam that tricks people into losing their money.”"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:46</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Options trading is nothing but a scam that tricks people into losing their money.”"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charges &amp; SIP grow has a very good user interface but the brokerage is very high while buying and selling you will experience it. don&#x27;t apply for an ipo. i never got an ipo from grow. even sip is also not good here." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:47</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Grow has a very good user interface but the brokerage is very high while buying and selling you will experience it. don&#x27;t apply for an IPO. I never got an IPO from Grow. even SIP is also not good here."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:47</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Grow has a very good user interface but the brokerage is very high while buying and selling you will experience it. don&#x27;t apply for an IPO. I never got an IPO from Grow. even SIP is also not good here."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charts &amp; TA after upgrading to a new update. order placed will not show exact value on the chart after coming back and again going into the chats it&#x27;s displaying correct plus or minus value and sometimes stoploss also not triggering we need to close the app and come back and also while selling getting adaptor has disconnected error." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:48</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"after upgrading to a new update. order placed will not show exact value on the chart after coming back and again going into the chats it&#x27;s displaying correct plus or minus value and sometimes stoploss also not triggering we need to close the app and come back and also while selling getting Adaptor has disconnected error."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:48</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"after upgrading to a new update. order placed will not show exact value on the chart after coming back and again going into the chats it&#x27;s displaying correct plus or minus value and sometimes stoploss also not triggering we need to close the app and come back and also while selling getting Adaptor has disconnected error."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback currently this application gets stuck and slow during the execution of trading. so don&#x27;t install this application otherwise you may lose your money." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:49</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Currently this application gets stuck and slow during the execution of trading. So don&#x27;t install this application otherwise you may lose your money."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:49</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Currently this application gets stuck and slow during the execution of trading. So don&#x27;t install this application otherwise you may lose your money."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution worst app for trading. i canceled my order but after 5 minutes order traded automatically" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:50</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"worst app for trading. I canceled my order but after 5 minutes order traded automatically"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:50</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"worst app for trading. I canceled my order but after 5 minutes order traded automatically"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution don&#x27;t use this app they manipulate your orders and buy at loss i have screen recording" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:51</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"don&#x27;t use this app they manipulate your orders and buy at loss I have screen recording"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:51</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"don&#x27;t use this app they manipulate your orders and buy at loss I have screen recording"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charts &amp; TA the android version of groww does not calculate live percentage changes directly on the main stock page preview chart. while ios dynamically shows both the rupee amount and the percentage offset right on the preview line when you drag your finger fix this issue for android users" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:52</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"the Android version of Groww does not calculate live percentage changes directly on the main stock page preview chart. While iOS dynamically shows both the rupee amount and the percentage offset right on the preview line when you drag your finger fix this issue for Android users"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:52</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"the Android version of Groww does not calculate live percentage changes directly on the main stock page preview chart. While iOS dynamically shows both the rupee amount and the percentage offset right on the preview line when you drag your finger fix this issue for Android users"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution worst experience while using the application. while placing the exit it&#x27;s showing adapter disconnected. who take the responsibility. who loss the money. please dnt use this application for f&amp;o trade." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:53</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Worst experience while using the application. while placing the exit it&#x27;s showing adapter disconnected. Who take the responsibility. Who loss the money. please dnt use this application for f&amp;o trade."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:53</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Worst experience while using the application. while placing the exit it&#x27;s showing adapter disconnected. Who take the responsibility. Who loss the money. please dnt use this application for f&amp;o trade."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback such a disgusting app trade is not executed in proper time ghatiya" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:54</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Such a disgusting app Trade is not executed in proper time Ghatiya"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:54</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Such a disgusting app Trade is not executed in proper time Ghatiya"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability best app i used ever very easy to use love it" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:55</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"best app I used ever very easy to use love it"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:55</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"best app I used ever very easy to use love it"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution after update very bad and laggy process for f&amp;o trading. facing many issues prices not updating,unable to find my position in scalper trading. please look and update" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:56</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"after update very bad and laggy process for F&amp;O trading. Facing many issues prices not updating,unable to find my position in scalper trading. Please look and update"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:56</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"after update very bad and laggy process for F&amp;O trading. Facing many issues prices not updating,unable to find my position in scalper trading. Please look and update"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability it is hard to focus on nunbers and letters. so please increase the font size. apart from that all features are easily accessible." data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:57</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"It is hard to focus on nunbers and letters. So please increase the font size. Apart from that all features are easily accessible."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:57</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"It is hard to focus on nunbers and letters. So please increase the font size. Apart from that all features are easily accessible."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution receiving this error on border journey expired every time if i try to buy shares i clear cache clear data as well uninstall as well but still show this problem" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:58</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"receiving this error on border journey expired every time if I try to buy shares i clear cache clear data as well uninstall as well but still show this problem"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:58</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"receiving this error on border journey expired every time if I try to buy shares i clear cache clear data as well uninstall as well but still show this problem"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charts &amp; TA while playing candles exit button disappear and i face heavy loss who will be responsible you or anyone else i am very angry" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:59</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"While playing candles Exit button disappear and i face heavy loss Who will be responsible you or anyone else i am very angry"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:59</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"While playing candles Exit button disappear and i face heavy loss Who will be responsible you or anyone else i am very angry"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability please remove explore in chat it not showing good" data-rating="3">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:10</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"please remove explore in chat it not showing good"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:10</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"please remove explore in chat it not showing good"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution worst experience because there the trade can&#x27;t exit easily" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:11</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"worst experience because there the trade can&#x27;t exit easily"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:11</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"worst experience because there the trade can&#x27;t exit easily"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution app is good but groww team not taking response. 1. while analysing portfolio there is no tally with market cap value, sector wise allocation and assets allocation. it to be updated with currect allocation in all sectors. 2. technician team telling updated but nothing changed, my overall xirr is -45.66% due to allocation not correct" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:12</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"app is good but groww team not taking response. 1. while analysing portfolio there is no tally with market cap value, sector wise allocation and assets allocation. it to be updated with currect allocation in all sectors. 2. Technician team telling updated but nothing changed, My overall XIRR is -45.66% due to allocation not correct"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:12</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"app is good but groww team not taking response. 1. while analysing portfolio there is no tally with market cap value, sector wise allocation and assets allocation. it to be updated with currect allocation in all sectors. 2. Technician team telling updated but nothing changed, My overall XIRR is -45.66% due to allocation not correct"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback only one worst thing that you can download on online is this app" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:13</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"only one worst thing that you can download on online is this app"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:13</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"only one worst thing that you can download on online is this app"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability one of the best broker application for beginners and students have used many apps but groww have most cleanest and easy to understand ui groww upi is one of the fastest upi i prefer grow upi mostly than my upi apps" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:14</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"One of the best Broker Application for beginners and students have used many apps but groww have most cleanest and easy to understand UI Groww upi is one of the fastest upi i prefer grow upi mostly than my upi apps"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:14</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"One of the best Broker Application for beginners and students have used many apps but groww have most cleanest and easy to understand UI Groww upi is one of the fastest upi i prefer grow upi mostly than my upi apps"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charges &amp; SIP new updates app syntax is too small it very harmful for eyes so please update previous version it was very useful and easy to operate" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:15</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"new updates app syntax is too small it very harmful for eyes so please update previous version it was very useful and easy to operate"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-29 09:15</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"new updates app syntax is too small it very harmful for eyes so please update previous version it was very useful and easy to operate"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability groww is a very good aap. this app is very simple for using." data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:16</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Groww is a very good aap. This app is very simple for using."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:16</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Groww is a very good aap. This app is very simple for using."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback its a great app but i give only 1 star because it doesn&#x27;t have landscape mode i use this app in my tablet so when i want to use in landscape mode i can&#x27;t do that" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:17</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Its a great app but I give only 1 star because it doesn&#x27;t have landscape mode i use this app in my tablet so when i want to use in landscape mode I can&#x27;t do that"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:17</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Its a great app but I give only 1 star because it doesn&#x27;t have landscape mode i use this app in my tablet so when i want to use in landscape mode I can&#x27;t do that"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Account &amp; KYC first of all.... this app has taken more than 7 days just to fetch pan card details.... and after 5 calls and emails they deleted my account.... i reopened my account.... now i have done 4 times kyc and it&#x27;s again asking to do kyc.... and again i tried adding bank account but that account is not linking.... i just fade up trying..... now i&#x27;ll uninstall this app" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:18</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"first of all.... this app has taken more than 7 days just to fetch pan card details.... and after 5 calls and emails they deleted my account.... I reopened my account.... now I have done 4 times kyc and it&#x27;s again asking to do KYC.... and again I tried adding bank account but that account is not linking.... I just fade up trying..... now I&#x27;ll uninstall this app"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-tertiary-container/20 text-tertiary">Account & KYC</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:18</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"first of all.... this app has taken more than 7 days just to fetch pan card details.... and after 5 calls and emails they deleted my account.... I reopened my account.... now I have done 4 times kyc and it&#x27;s again asking to do KYC.... and again I tried adding bank account but that account is not linking.... I just fade up trying..... now I&#x27;ll uninstall this app"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-tertiary-container/20 text-tertiary">Account & KYC</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability it&#x27;s a genuine and user-friendly, and also very much special for bigginer" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:19</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"it&#x27;s a genuine and user-friendly, and also very much special for bigginer"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:19</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"it&#x27;s a genuine and user-friendly, and also very much special for bigginer"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback add option for portfolio value/selected stock/indices value live on notification bar" data-rating="3">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:20</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Add option for portfolio value/Selected stock/indices value live on notification bar"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:20</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Add option for portfolio value/Selected stock/indices value live on notification bar"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charges &amp; SIP groww is a very user-friendly and reliable app. the interface is simple and easy to use, even for beginners. i really appreciate the zero account opening charges and zero annual maintenance charges (amc). the app provides a smooth experience and makes investing easy and convenient. highly recommended for beginners and experienced investors alike!" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:21</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Groww is a very user-friendly and reliable app. The interface is simple and easy to use, even for beginners. I really appreciate the zero account opening charges and zero annual maintenance charges (AMC). The app provides a smooth experience and makes investing easy and convenient. Highly recommended for beginners and experienced investors alike!"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:21</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Groww is a very user-friendly and reliable app. The interface is simple and easy to use, even for beginners. I really appreciate the zero account opening charges and zero annual maintenance charges (AMC). The app provides a smooth experience and makes investing easy and convenient. Highly recommended for beginners and experienced investors alike!"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback only some private banks are allowed for loading funds for us investments. when can expect other banks and govt banks." data-rating="3">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:22</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"only some private banks are allowed for loading funds for US investments. When can expect other banks and Govt Banks."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:22</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"only some private banks are allowed for loading funds for US investments. When can expect other banks and Govt Banks."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charges &amp; SIP should mention brokerage and tax charges after each transaction a little clearly" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:23</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"should mention brokerage and tax charges after each transaction a little clearly"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:23</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"should mention brokerage and tax charges after each transaction a little clearly"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback groww is a scammer and engages in fraudulent practices. i used mtf, where the units are supposed to be automatically squared off when the portfolio goes into negative territory. however, groww failed to square off my positions on time, due to which i had to sell all my units myself. even after selling all the units, my balance is still showing negative, despite having no shares left in my portfolio. groww should have squared off my positions on time to prevent this situation." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:24</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Groww is a scammer and engages in fraudulent practices. I used MTF, where the units are supposed to be automatically squared off when the portfolio goes into negative territory. However, Groww failed to square off my positions on time, due to which I had to sell all my units myself. Even after selling all the units, my balance is still showing negative, despite having no shares left in my portfolio. Groww should have squared off my positions on time to prevent this situation."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:24</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Groww is a scammer and engages in fraudulent practices. I used MTF, where the units are supposed to be automatically squared off when the portfolio goes into negative territory. However, Groww failed to square off my positions on time, due to which I had to sell all my units myself. Even after selling all the units, my balance is still showing negative, despite having no shares left in my portfolio. Groww should have squared off my positions on time to prevent this situation."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback welcome to welcome to gboard clipboard, any text that you copy will be saved here.v yc haiuv gai hai cg." data-rating="3">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:25</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Welcome to Welcome to Gboard clipboard, any text that you copy will be saved here.v yc haiuv gai hai cg."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:25</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Welcome to Welcome to Gboard clipboard, any text that you copy will be saved here.v yc haiuv gai hai cg."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution what happened grow app it&#x27;s very good few months ago but now iam facing problem that hanging and slow because of this i loses of many trades that&#x27;s why i deleted this app and shifting other brocker platforms please solve the such problems i will back" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:26</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"what happened grow app it&#x27;s very good few months ago but now iam facing problem that hanging and slow because of this i loses of many trades that&#x27;s why I deleted this app and shifting other brocker platforms please solve the such problems I will back"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:26</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"what happened grow app it&#x27;s very good few months ago but now iam facing problem that hanging and slow because of this i loses of many trades that&#x27;s why I deleted this app and shifting other brocker platforms please solve the such problems I will back"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution too much glitch... i was to take away at let say +4 but suddenly it started showing jumbled numbers everywhere like literally jumbled everything. then got executed at -16... very bad really..." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:27</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"too much glitch... I was to take away at let say +4 but suddenly it started showing jumbled numbers everywhere like literally jumbled everything. then got executed at -16... very bad really..."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:27</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"too much glitch... I was to take away at let say +4 but suddenly it started showing jumbled numbers everywhere like literally jumbled everything. then got executed at -16... very bad really..."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charts &amp; TA best part of grow... easy to use with very much convenience ,less clattered user friendly for beginners...yeah but one thing they should upgrade is candlestick time frame less than minute should introduce and indicators customisation....." data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:28</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"best part of grow... easy to use with very much convenience ,less clattered user friendly for beginners...yeah but one thing they should upgrade is candlestick time frame less than minute should introduce and indicators customisation....."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:28</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"best part of grow... easy to use with very much convenience ,less clattered user friendly for beginners...yeah but one thing they should upgrade is candlestick time frame less than minute should introduce and indicators customisation....."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-secondary/10 text-secondary">Charts & TA</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution hi team the chevron for the date range change in quarterly results has gone missing after updating my app. kindly bring it back.. ." data-rating="2">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:29</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★☆☆☆ <span class="ml-1 text-outline">2.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Hi Team the chevron for the date range change in quarterly results has gone missing after updating my app. kindly bring it back.. ."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:29</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★☆☆☆ <span class="ml-1 text-outline">2.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Hi Team the chevron for the date range change in quarterly results has gone missing after updating my app. kindly bring it back.. ."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback detailed view of shares purchased and current market price is not available in single window please update it ." data-rating="4">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:30</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"detailed view of shares purchased and current market price is not available in single window please update it ."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:30</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★☆ <span class="ml-1 text-outline">4.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"detailed view of shares purchased and current market price is not available in single window please update it ."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability very fast and quick services i am very impressed" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:31</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"very fast and quick services i am very impressed"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:31</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"very fast and quick services i am very impressed"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="General Feedback very disappointed when you guys removed fixed deposit feature" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:32</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"very disappointed when you guys removed fixed deposit feature"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:32</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"very disappointed when you guys removed fixed deposit feature"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container text-on-surface-variant">General Feedback</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability not working sometimes. this app is strucking in middle of trading. please update for easy operating. thank you." data-rating="3">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:33</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"not working sometimes. this app is strucking in middle of trading. please update for easy operating. thank you."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:33</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-amber-400 font-label-caps text-label-caps">★★★☆☆ <span class="ml-1 text-outline">3.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"not working sometimes. this app is strucking in middle of trading. please update for easy operating. thank you."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charges &amp; SIP this app has not font increase option those who not able see small font how could they use app comfortable . developer must note and take feedback and app development tag from this and add font increase option in next updation." data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:34</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"This app has Not Font Increase option Those who not able see small font how could they use app comfortable . Developer must note and take feedback and app development tag from this and add font increase option in next updation."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:34</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"This app has Not Font Increase option Those who not able see small font how could they use app comfortable . Developer must note and take feedback and app development tag from this and add font increase option in next updation."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability i love this application as its simple and easy to invest in mutual fund and stock.. i have been using since 3 years and quite satisfied" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:35</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"i love this application as its simple and easy to invest in mutual fund and stock.. i have been using since 3 years and quite satisfied"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:35</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"i love this application as its simple and easy to invest in mutual fund and stock.. i have been using since 3 years and quite satisfied"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Order Execution worst application for traders. it lags trading features giving error &quot;please place orders in strikes closer to the spot price&quot; which leads huge loss of capital. where as in upstox you can take any strike price.switching back to upstox" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:36</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"worst application for traders. it lags trading features giving error &quot;Please place orders in strikes closer to the spot price&quot; which leads huge loss of capital. where as in upstox you can take any strike price.switching back to upstox"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:36</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"worst application for traders. it lags trading features giving error &quot;Please place orders in strikes closer to the spot price&quot; which leads huge loss of capital. where as in upstox you can take any strike price.switching back to upstox"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-rose-500/10 text-rose-400">Order Execution</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability fasteners &amp; smoother working word best features no. 1 application" data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:37</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"fasteners &amp; smoother working word best features no. 1 application"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:37</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"fasteners &amp; smoother working word best features no. 1 application"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="UI Usability very good and suitable system of this application so easy to understand." data-rating="5">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:38</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"very good and suitable system of this application so easy to understand."</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:38</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-primary font-label-caps text-label-caps">★★★★★ <span class="ml-1 text-outline">5.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"very good and suitable system of this application so easy to understand."</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-primary/10 text-primary">UI Usability</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
   </td>
 </tr>
 <tr class="hover:bg-white/[0.02] transition-colors" data-keywords="Charges &amp; SIP worst app. while selling jio shares, it took 7 mins to load tpin option with superfast internet connection. my friend used kotak neo and he got the best price within seconds. don&#x27;t apply your charges on the transaction" data-rating="1">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:39</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
-  <td class="py-3 px-4 text-on-surface">"Worst app. while selling Jio shares, it took 7 mins to load tpin option with superfast internet connection. My friend used Kotak Neo and he got the best price within seconds. Don&#x27;t apply your charges on the transaction"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">2026-10-28 09:39</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="flex items-center text-rose-500 font-label-caps text-label-caps">★☆☆☆☆ <span class="ml-1 text-outline">1.0</span></span></td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"Worst app. while selling Jio shares, it took 7 mins to load tpin option with superfast internet connection. My friend used Kotak Neo and he got the best price within seconds. Don&#x27;t apply your charges on the transaction"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code bg-surface-container-high text-on-surface-variant">Charges & SIP</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
@@ -1690,7 +1754,6 @@
 
       logToTerminal(`Initiating Groww Reviews Weekly Pulse (${isDryRun ? 'Dry-Run Mode' : 'Production Mode'})...`, 'text-primary font-bold');
 
-      // Helper step progression animation
       setStep('stepIngest', 'active');
       setStep('stepCluster', 'pending');
       setStep('stepPulse', 'pending');
@@ -1753,11 +1816,11 @@
           logToTerminal(`Generated pulse note: ${data.result.word_count || 214} words (<= 250 word budget satisfied).`, 'text-primary');
 
           if (isDryRun) {
-            logToTerminal('[DRY-RUN] Would append pulse to Google Doc: ' + (data.result.doc_url || '1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM'), 'text-secondary');
-            logToTerminal('[DRY-RUN] Would dispatch Gmail notification to stakeholders.', 'text-secondary');
+            logToTerminal('[DRY-RUN] Would append pulse to Google Doc: ' + (data.result.doc_url || 'https://docs.google.com/document/d/1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM/edit'), 'text-secondary');
+            logToTerminal('[DRY-RUN] Would dispatch Gmail notification to ' + 'tinapanda1410@gmail.com', 'text-secondary');
           } else {
-            logToTerminal('Google Doc updated: ' + (data.result.doc_url || '1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM'), 'text-primary font-bold');
-            logToTerminal('Gmail notification sent (Message ID: ' + (data.result.message_id || 'sent') + ')', 'text-primary');
+            logToTerminal('Google Doc updated: ' + (data.result.doc_url || 'https://docs.google.com/document/d/1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM/edit'), 'text-primary font-bold');
+            logToTerminal('Gmail notification sent (Message ID: ' + (data.result.message_id || 'sent') + ') to tinapanda1410@gmail.com', 'text-primary');
           }
 
           if (data.result.pulse_prose) {

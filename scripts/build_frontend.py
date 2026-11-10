@@ -5,12 +5,14 @@ Generates the complete, high-fidelity dark-theme frontend at index.html
 using stitch/code.html and stitch/DESIGN.md.
 
 Enhancements:
-  - Dynamically renders all 80 real reviews from data/reviews_2026-11-01.json
+  - Responsive full-width layout: Zero horizontal overflow at 100% zoom
+  - Cleaned up navigation: Open Google Doc placed purposefully (Header + MCP Hub only)
+  - Dynamically renders all 80 real reviews with table-fixed column wrapping
   - Working Intelligence Suites navigation with smooth-scrolling & scroll-spy
   - Dedicated Sentiment Radar & Ratings breakdown section
   - Fully working interactive Dry-Run & Live-Run terminal modal
-  - Verified Google Doc link to 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
-  - API auto-detection (runs live via Vercel/Railway or offline via telemetry)
+  - Verified Google Doc link to 1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM
+  - Stakeholder email set to tinapanda1410@gmail.com
 """
 
 import html
@@ -69,104 +71,154 @@ def build():
 
     doc_id = "1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM"
     doc_url = f"https://docs.google.com/document/d/{doc_id}/edit"
+    recipient_email = "tinapanda1410@gmail.com"
 
     base_html = stitch_html.read_text(encoding="utf-8")
 
-    # 1. Update Google Doc Link and ensure button is visible across all screens
-    base_html = base_html.replace('href="https://docs.google.com"', f'href="{doc_url}"')
-    
-    # In TARGET GOOGLE DOC card, turn the doc ID into a clickable link to the doc
-    base_html = base_html.replace(
-        '<span class="text-primary truncate">1BxiMVs994xK_2026_W44</span>',
-        f'<a href="{doc_url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary hover:underline font-mono text-[11px] truncate cursor-pointer font-medium"><span class="truncate">{doc_id}</span><span class="material-symbols-outlined text-[13px] shrink-0">open_in_new</span></a>'
-    )
-    base_html = base_html.replace("1BxiMVs994xK_2026_W44", doc_id)
-    base_html = base_html.replace("stakeholders@groww.in", "tinapanda1410@gmail.com")
+    # ── 1. Global Box-Sizing & Viewport Fix (Prevents Horizontal Scroll blowout) ──
+    old_style = '<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>'
+    new_style = '<style>@layer base{*,*::before,*::after{box-sizing:border-box;}html,body{margin:0;padding:0;width:100%;max-width:100vw;overflow-x:hidden;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>'
+    base_html = base_html.replace(old_style, new_style)
 
-    # In Header: Remove hidden lg:flex so the header button is visible on mobile/tablets/laptops
+    # ── 2. Header Layout: Clean & Compact (Fits all screens at 100% zoom) ─────────
+    # Replace whole header inner container to avoid overlapping items
+    old_header_start = '<header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_20px_rgba(0,0,0,0.5)]">'
+    new_header = f'''<header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+<div class="w-full h-full px-4 lg:px-6 flex items-center justify-between gap-2 sm:gap-4 box-border">
+  <!-- Brand & Status -->
+  <div class="flex items-center gap-3 shrink-0">
+    <img alt="Groww Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCP06O199GqLlRvd-r4YOXnD6hJu6cP0a8QUhmK_KidRsQc1JMmeC2eZBzFsTH6Lpx9hkyxNNZBCJmiltAyNMHiSxxBRK9yDpDVukLgc1M-CrXG7RkrYMbmBwxIv1oe4qCg94MxCbA8Lc2nr5ZEdIxMFbRfD6R__9cJcfPTwpZUi-kNf9n4Nwrj08i7Wrk5IWNDOtAqxiUIP7ldX-10fLQ3hgWK6W0NSdD4sD51LKY"/>
+    <div class="flex items-center gap-2">
+      <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">Groww</span>
+      <span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 uppercase tracking-widest hidden sm:inline">Reviews Pulse</span>
+    </div>
+    <div class="hidden 2xl:flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container-low border border-white/[0.06]">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+      </span>
+      <span class="font-telemetry-code text-telemetry-code text-on-surface-variant font-medium">Live Pipeline • w/e Nov 01, 2026</span>
+    </div>
+  </div>
+
+  <!-- Center Status Badges (Visible on larger screens) -->
+  <div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low border border-white/[0.08]">
+    <span class="h-2 w-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,208,156,0.6)]"></span>
+    <span class="font-telemetry-code text-telemetry-code text-on-surface-variant">MCP: <span class="text-on-surface font-mono">mcpservergroww.vercel.app</span></span>
+    <span class="font-label-caps text-label-caps text-primary">(Connected)</span>
+  </div>
+
+  <!-- Primary Header Actions -->
+  <div class="flex items-center gap-2 shrink-0">
+    <button id="dryRunHeaderBtn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-white/[0.16] text-on-surface transition-all font-body-sm text-body-sm cursor-pointer" type="button">
+      <span class="material-symbols-outlined text-[16px] text-on-surface-variant">settings</span>
+      <span>Dry Run</span>
+    </button>
+    <button id="liveRunHeaderBtn" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary transition-all shadow-[0_0_16px_rgba(0,208,156,0.35)] cursor-pointer" type="button">
+      <span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+      <span>Run Weekly Pipeline</span>
+    </button>
+    <a href="{doc_url}" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-primary/40 text-on-surface hover:text-primary transition-all font-body-sm text-body-sm shadow-sm cursor-pointer">
+      <span class="material-symbols-outlined text-[16px] text-primary">description</span>
+      <span>Open Google Doc</span>
+      <span class="material-symbols-outlined text-[13px] text-outline">open_in_new</span>
+    </a>
+    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1 shadow-[0_0_10px_rgba(0,208,156,0.2)]">
+      <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+    </div>
+  </div>
+</div>
+</header>'''
+
+    # Replace header in base_html
+    header_end_tag = '</header>'
+    h_start = base_html.find(old_header_start)
+    h_end = base_html.find(header_end_tag, h_start) + len(header_end_tag)
+    if h_start != -1 and h_end != -1:
+        base_html = base_html[:h_start] + new_header + base_html[h_end:]
+
+    # ── 3. Sidebar Navigation: 5 Clean Intelligence Suites (No duplicate doc button) ──
+    old_aside_start = '<aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface-container-lowest border-r border-white/[0.08] z-40 flex flex-col justify-between p-4">'
+    old_aside_end = '</aside>'
+    a_start = base_html.find(old_aside_start)
+    a_end = base_html.find(old_aside_end, a_start) + len(old_aside_end)
+
+    new_aside = '''<aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-60 lg:w-64 bg-surface-container-lowest border-r border-white/[0.08] z-40 flex flex-col justify-between p-4 overflow-y-auto">
+  <div class="flex flex-col gap-5">
+    <div class="px-2">
+      <p class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Intelligence Suites</p>
+    </div>
+    <nav class="flex flex-col gap-1.5" id="intelligenceSuitesNav">
+      <a aria-current="page" class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all bg-surface-container-high text-primary font-semibold border-l-2 border-primary pl-3 cursor-pointer" data-target="executive-pulse" href="#executive-pulse">
+        <span class="material-symbols-outlined text-[20px]">analytics</span>
+        <span class="font-body-md text-body-md">Executive Pulse</span>
+      </a>
+      <a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="sentiment-radar" href="#sentiment-radar">
+        <span class="material-symbols-outlined text-[20px]">radar</span>
+        <span class="font-body-md text-body-md">Sentiment Radar</span>
+      </a>
+      <a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="reviews-stream" href="#reviews-stream">
+        <span class="material-symbols-outlined text-[20px]">dynamic_feed</span>
+        <span class="font-body-md text-body-md">Reviews Stream</span>
+      </a>
+      <a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="feature-telemetry" href="#feature-telemetry">
+        <span class="material-symbols-outlined text-[20px]">tune</span>
+        <span class="font-body-md text-body-md">Feature Telemetry</span>
+      </a>
+      <a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="mcp-orchestration" href="#mcp-orchestration">
+        <span class="material-symbols-outlined text-[20px]">terminal</span>
+        <span class="font-body-md text-body-md">MCP Orchestrator</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Bottom Sync Status Card (Clean & uncluttered) -->
+  <div class="p-3 rounded-xl bg-surface-container-low border border-white/[0.06] flex flex-col gap-2">
+    <div class="flex items-center justify-between">
+      <span class="font-label-caps text-label-caps text-outline">Sync Cycle #148</span>
+      <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+    </div>
+    <div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+      <div class="h-full bg-primary rounded-full w-4/5 shadow-[0_0_6px_rgba(68,237,183,0.8)]"></div>
+    </div>
+    <p class="font-telemetry-code text-telemetry-code text-on-surface-variant">Next automated scrape in 22h</p>
+  </div>
+</aside>'''
+
+    if a_start != -1 and a_end != -1:
+        base_html = base_html[:a_start] + new_aside + base_html[a_end:]
+
+    # ── 4. Main Wrapper: Enforce min-w-0, box-border, and zero horizontal overflow ──
     base_html = base_html.replace(
-        'class="hidden lg:flex items-center gap-1 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all font-body-md text-body-md"',
-        'class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-primary/40 text-on-surface hover:text-primary transition-all font-body-md text-body-md shadow-sm"'
+        '<div class="pl-64"><main class="relative pt-16 min-h-screen bg-surface w-full px-gutter-desktop py-space-xl"><div class="flex flex-col w-full space-y-6">',
+        '<div class="pl-60 lg:pl-64 w-full min-w-0 max-w-full overflow-x-hidden box-border"><main class="relative pt-16 min-h-screen bg-surface w-full min-w-0 max-w-full px-4 sm:px-6 lg:px-8 py-6 box-border"><div class="flex flex-col w-full min-w-0 max-w-full space-y-6">'
     )
 
-    # In Executive Brief: Add an Open in Google Docs button right next to Copy Pulse Prose
-    base_html = base_html.replace(
-        'id="copyPulseBtn" type="button"><span class="material-symbols-outlined text-[14px]">content_copy</span><span>Copy Pulse Prose</span></button>',
-        f'id="copyPulseBtn" type="button"><span class="material-symbols-outlined text-[14px]">content_copy</span><span>Copy Pulse Prose</span></button><a href="{doc_url}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.06] border border-white/[0.12] text-on-surface hover:text-primary hover:border-primary/40 transition-all font-headline-sm text-body-sm font-semibold shadow-sm cursor-pointer"><span class="material-symbols-outlined text-[15px] text-primary">description</span><span>Open in Google Docs</span><span class="material-symbols-outlined text-[13px] text-outline">open_in_new</span></a>'
-    )
-
-    # In Sidebar: Add an Open Google Doc link button
-    base_html = base_html.replace(
-        'Next automated scrape in 22h</p></div></aside>',
-        f'Next automated scrape in 22h</p></div><div class="pt-2"><a href="{doc_url}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container border border-white/[0.08] hover:border-primary/40 transition-all text-on-surface group cursor-pointer shadow-sm"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">description</span><span class="font-body-sm text-body-sm font-medium">Open in Google Docs</span></div><span class="material-symbols-outlined text-[14px] text-outline group-hover:text-primary">open_in_new</span></a></div></aside>'
-    )
-
-    # 2. Update Header Buttons with distinct IDs
-    base_html = base_html.replace(
-        '<button class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-white/[0.16] text-on-surface transition-all font-headline-sm text-body-md" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">settings</span><span>Dry Run</span></button>',
-        '<button id="dryRunHeaderBtn" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-white/[0.16] text-on-surface transition-all font-headline-sm text-body-md cursor-pointer" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">settings</span><span>Dry Run</span></button>'
-    )
-    base_html = base_html.replace(
-        '<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-md font-semibold hover:bg-primary transition-all shadow-[0_0_16px_rgba(0,208,156,0.35)]" type="button"><span class="material-symbols-outlined text-[16px]">rocket_launch</span><span>Run Weekly Pipeline</span></button>',
-        '<button id="liveRunHeaderBtn" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-md font-semibold hover:bg-primary transition-all shadow-[0_0_16px_rgba(0,208,156,0.35)] cursor-pointer" type="button"><span class="material-symbols-outlined text-[16px]">rocket_launch</span><span>Run Weekly Pipeline</span></button>'
-    )
-
-    # 3. Update Sidebar Navigation: replace dead # links with working targets
-    old_nav = '''<nav class="flex flex-col gap-1.5" data-active-classes="bg-surface-container-high text-primary font-semibold border-l-2 border-primary pl-3"><a aria-current="page" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all bg-surface-container-high text-primary font-semibold border-l-2 border-primary pl-3" data-path="pulse-overview" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Executive Pulse</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sentiment-radar" href="#"><span class="material-symbols-outlined text-[20px]">radar</span><span class="font-body-md text-body-md">Sentiment Radar</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reviews-stream" href="#"><span class="material-symbols-outlined text-[20px]">dynamic_feed</span><span class="font-body-md text-body-md">Reviews Stream</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="feature-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Feature Telemetry</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="mcp-orchestration" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-body-md text-body-md">MCP Orchestrator</span></a></nav>'''
-    
-    new_nav = '''<nav class="flex flex-col gap-1.5" id="intelligenceSuitesNav">
-<a aria-current="page" class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all bg-surface-container-high text-primary font-semibold border-l-2 border-primary pl-3 cursor-pointer" data-target="executive-pulse" href="#executive-pulse">
-  <span class="material-symbols-outlined text-[20px]">analytics</span>
-  <span class="font-body-md text-body-md">Executive Pulse</span>
-</a>
-<a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="sentiment-radar" href="#sentiment-radar">
-  <span class="material-symbols-outlined text-[20px]">radar</span>
-  <span class="font-body-md text-body-md">Sentiment Radar</span>
-</a>
-<a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="reviews-stream" href="#reviews-stream">
-  <span class="material-symbols-outlined text-[20px]">dynamic_feed</span>
-  <span class="font-body-md text-body-md">Reviews Stream</span>
-</a>
-<a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="feature-telemetry" href="#feature-telemetry">
-  <span class="material-symbols-outlined text-[20px]">tune</span>
-  <span class="font-body-md text-body-md">Feature Telemetry</span>
-</a>
-<a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="mcp-orchestration" href="#mcp-orchestration">
-  <span class="material-symbols-outlined text-[20px]">terminal</span>
-  <span class="font-body-md text-body-md">MCP Orchestrator</span>
-</a>
-</nav>'''
-    base_html = base_html.replace(old_nav, new_nav)
-
-    # 4. Add Section IDs to DOM elements
-    # Executive Pulse KPI ribbon
+    # ── 5. Section IDs & Grid Wrappers ──────────────────────────────────────────
     base_html = base_html.replace(
         '<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">',
-        '<section id="executive-pulse" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 scroll-mt-20">'
+        '<section id="executive-pulse" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 scroll-mt-20 w-full min-w-0">'
     )
 
-    # Feature Telemetry Main Split
     base_html = base_html.replace(
         '<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">',
-        '<div id="feature-telemetry" class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start scroll-mt-20">'
+        '<div id="feature-telemetry" class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start scroll-mt-20 w-full min-w-0">'
     )
 
-    # MCP Hub within Feature Telemetry
     base_html = base_html.replace(
-        '<div class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-3.5">\n<div class="flex items-center justify-between">\n<div class="flex items-center gap-2">\n<span class="material-symbols-outlined text-primary text-[20px]">hub</span>\n<h2 class="font-headline-sm text-headline-sm text-on-surface">MCP Delivery Hub</h2>',
-        '<div id="mcp-orchestration" class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-3.5 scroll-mt-20">\n<div class="flex items-center justify-between">\n<div class="flex items-center gap-2">\n<span class="material-symbols-outlined text-primary text-[20px]">hub</span>\n<h2 class="font-headline-sm text-headline-sm text-on-surface">MCP Delivery Hub</h2>'
+        '<div class="lg:col-span-7 flex flex-col space-y-4">',
+        '<div class="lg:col-span-7 min-w-0 flex flex-col space-y-4">'
     )
 
-    # Reviews Stream
     base_html = base_html.replace(
-        '<section class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-4">',
-        '<section id="reviews-stream" class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-4 scroll-mt-20">'
+        '<div class="lg:col-span-5 flex flex-col space-y-4">',
+        '<div class="lg:col-span-5 min-w-0 flex flex-col space-y-4">'
     )
 
-    # 5. Insert dedicated Sentiment Radar Section right after the top KPI ribbon
+    # ── 6. Dedicated Sentiment Radar Section (Inserted before Main Split) ─────────
     sentiment_radar_html = """
 <!-- SENTIMENT RADAR & RATING HEALTH SUITE -->
-<section id="sentiment-radar" class="rounded-xl bg-surface-container-low p-5 shadow-xl space-y-4 border border-white/[0.04] scroll-mt-20">
+<section id="sentiment-radar" class="rounded-xl bg-surface-container-low p-5 shadow-xl space-y-4 border border-white/[0.04] scroll-mt-20 w-full min-w-0">
   <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
     <div class="flex items-center gap-2.5">
       <span class="material-symbols-outlined text-primary text-[22px]">radar</span>
@@ -186,9 +238,9 @@ def build():
     </div>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pt-1">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pt-1 w-full min-w-0">
     <!-- Star Rating Distribution Histogram -->
-    <div class="lg:col-span-7 bg-surface-container p-4 rounded-xl space-y-3">
+    <div class="lg:col-span-7 min-w-0 bg-surface-container p-4 rounded-xl space-y-3">
       <div class="flex items-center justify-between">
         <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Star Rating Breakdown</span>
         <span class="font-telemetry-code text-telemetry-code text-on-surface-variant">Weighted Avg: 2.87 / 5.0</span>
@@ -238,7 +290,7 @@ def build():
     </div>
 
     <!-- Polarity Quadrants -->
-    <div class="lg:col-span-5 flex flex-col justify-between gap-2.5">
+    <div class="lg:col-span-5 min-w-0 flex flex-col justify-between gap-2.5">
       <div class="bg-surface-container p-3 rounded-xl space-y-1.5 border-l-2 border-primary">
         <div class="flex items-center justify-between">
           <span class="font-label-caps text-label-caps text-primary uppercase font-bold">Positive Sentiment (40.0%)</span>
@@ -272,11 +324,31 @@ def build():
   </div>
 </section>
 """
-    # Insert right before MAIN SPLIT
     split_marker = '<!-- MAIN SPLIT: VOC THEMES (60%) vs ACTION PLAN & MCP (40%) -->'
     base_html = base_html.replace(split_marker, f"{sentiment_radar_html}\n{split_marker}")
 
-    # 6. Update star filter pill counts in HTML
+    # ── 7. MCP Delivery Hub Card: Clean target link & active recipient ────────────
+    # Target Google Doc card link
+    base_html = base_html.replace(
+        '<span class="text-primary truncate">1BxiMVs994xK_2026_W44</span>',
+        f'<a href="{doc_url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary hover:underline font-mono text-[11px] truncate cursor-pointer font-medium"><span class="truncate">{doc_id}</span><span class="material-symbols-outlined text-[13px] shrink-0">open_in_new</span></a>'
+    )
+    base_html = base_html.replace("1BxiMVs994xK_2026_W44", doc_id)
+    base_html = base_html.replace("stakeholders@groww.in", recipient_email)
+
+    # MCP Hub ID wrapper
+    base_html = base_html.replace(
+        '<div class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-3.5">\n<div class="flex items-center justify-between">\n<div class="flex items-center gap-2">\n<span class="material-symbols-outlined text-primary text-[20px]">hub</span>\n<h2 class="font-headline-sm text-headline-sm text-on-surface">MCP Delivery Hub</h2>',
+        '<div id="mcp-orchestration" class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-3.5 scroll-mt-20">\n<div class="flex items-center justify-between">\n<div class="flex items-center gap-2">\n<span class="material-symbols-outlined text-primary text-[20px]">hub</span>\n<h2 class="font-headline-sm text-headline-sm text-on-surface">MCP Delivery Hub</h2>'
+    )
+
+    # Reviews Stream ID wrapper
+    base_html = base_html.replace(
+        '<section class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-4">',
+        '<section id="reviews-stream" class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-4 scroll-mt-20 w-full min-w-0">'
+    )
+
+    # ── 8. Star Filter Pills & Counts ──────────────────────────────────────────
     count_1 = star_counts[1]
     count_2 = star_counts[2]
     count_3 = star_counts[3]
@@ -289,7 +361,7 @@ def build():
     base_html = base_html.replace('data-filter="3">3-Star (8)</button>', f'data-filter="3">3-Star ({count_3})</button>')
     base_html = base_html.replace('data-filter="4-5">4-5 Star (6)</button>', f'data-filter="4-5">4-5 Star ({count_4_5})</button>')
 
-    # 7. Generate full table rows HTML
+    # ── 9. Review Rows Generation with Text-Wrap & Table Protection ───────────
     rows_html = []
     for r in enriched_reviews:
         score = r["score"]
@@ -308,11 +380,11 @@ def build():
         keywords_attr = html.escape(f"{r['theme']} {r['content'].lower()}")
 
         row = f'''<tr class="hover:bg-white/[0.02] transition-colors" data-keywords="{keywords_attr}" data-rating="{score}">
-  <td class="py-3 px-4 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">{r["date"]}</td>
-  <td class="py-3 px-4 whitespace-nowrap">{stars_html}</td>
-  <td class="py-3 px-4 text-on-surface">"{content_escaped}"</td>
-  <td class="py-3 px-4 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code {r["tag_classes"]}">{r["theme"]}</span></td>
-  <td class="py-3 px-4 text-right whitespace-nowrap">
+  <td class="py-3 px-3 font-telemetry-code text-telemetry-code text-on-surface-variant whitespace-nowrap">{r["date"]}</td>
+  <td class="py-3 px-3 whitespace-nowrap">{stars_html}</td>
+  <td class="py-3 px-4 text-on-surface break-words leading-relaxed">"{content_escaped}"</td>
+  <td class="py-3 px-3 whitespace-nowrap"><span class="inline-flex px-2 py-0.5 rounded text-telemetry-code font-telemetry-code {r["tag_classes"]}">{r["theme"]}</span></td>
+  <td class="py-3 px-3 text-right whitespace-nowrap">
     <span class="inline-flex items-center gap-1 font-telemetry-code text-telemetry-code text-primary">
       <span class="material-symbols-outlined text-[13px]">verified</span> Clean ✓
     </span>
@@ -327,10 +399,29 @@ def build():
     if tbody_start != -1 and tbody_end != -1:
         base_html = base_html[:tbody_start] + table_body_replacement + base_html[tbody_end:]
 
+    # Enforce table-fixed layout so wide reviews wrap
+    base_html = base_html.replace(
+        '<table class="w-full text-left font-body-sm text-body-sm">',
+        '<table class="w-full text-left font-body-sm text-body-sm table-fixed">'
+    )
+
+    # Column widths for table
+    old_thead = '''<thead class="bg-surface-container text-outline font-label-caps text-label-caps uppercase tracking-wider">\n<tr>\n<th class="py-2.5 px-4 font-semibold">Date</th>\n<th class="py-2.5 px-4 font-semibold">Rating</th>\n<th class="py-2.5 px-4 font-semibold w-1/2">Cleaned Voice of Customer</th>\n<th class="py-2.5 px-4 font-semibold">Theme</th>\n<th class="py-2.5 px-4 font-semibold text-right">Status</th>\n</tr>\n</thead>'''
+    new_thead = '''<thead class="bg-surface-container text-outline font-label-caps text-label-caps uppercase tracking-wider">
+<tr>
+<th class="py-2.5 px-3 font-semibold w-28 whitespace-nowrap">Date</th>
+<th class="py-2.5 px-3 font-semibold w-24 whitespace-nowrap">Rating</th>
+<th class="py-2.5 px-4 font-semibold">Cleaned Voice of Customer</th>
+<th class="py-2.5 px-3 font-semibold w-36 whitespace-nowrap">Theme</th>
+<th class="py-2.5 px-3 font-semibold w-28 text-right whitespace-nowrap">Status</th>
+</tr>
+</thead>'''
+    base_html = base_html.replace(old_thead, new_thead)
+
     # Update visible count label
     base_html = base_html.replace('Showing <span class="text-primary font-bold" id="visibleCount">6</span> of 80 ingested items', f'Showing <span class="text-primary font-bold" id="visibleCount">{total_count}</span> of {total_count} ingested items')
 
-    # 8. Define the Pipeline Execution Modal HTML
+    # ── 10. Pipeline Execution Console Modal ──────────────────────────────────
     modal_html = f"""
 <!-- PIPELINE EXECUTION CONSOLE MODAL -->
 <div id="pipelineModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
@@ -409,7 +500,7 @@ def build():
 </div>
 """
 
-    # 9. Define Enhanced Interaction Script
+    # ── 11. Enhanced Interaction Script ───────────────────────────────────────
     enhanced_script = """
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -608,7 +699,6 @@ def build():
 
       logToTerminal(`Initiating Groww Reviews Weekly Pulse (${isDryRun ? 'Dry-Run Mode' : 'Production Mode'})...`, 'text-primary font-bold');
 
-      // Helper step progression animation
       setStep('stepIngest', 'active');
       setStep('stepCluster', 'pending');
       setStep('stepPulse', 'pending');
@@ -671,11 +761,11 @@ def build():
           logToTerminal(`Generated pulse note: ${data.result.word_count || 214} words (<= 250 word budget satisfied).`, 'text-primary');
 
           if (isDryRun) {
-            logToTerminal('[DRY-RUN] Would append pulse to Google Doc: ' + (data.result.doc_url || '1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM'), 'text-secondary');
-            logToTerminal('[DRY-RUN] Would dispatch Gmail notification to stakeholders.', 'text-secondary');
+            logToTerminal('[DRY-RUN] Would append pulse to Google Doc: ' + (data.result.doc_url || 'https://docs.google.com/document/d/1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM/edit'), 'text-secondary');
+            logToTerminal('[DRY-RUN] Would dispatch Gmail notification to ' + 'tinapanda1410@gmail.com', 'text-secondary');
           } else {
-            logToTerminal('Google Doc updated: ' + (data.result.doc_url || '1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM'), 'text-primary font-bold');
-            logToTerminal('Gmail notification sent (Message ID: ' + (data.result.message_id || 'sent') + ')', 'text-primary');
+            logToTerminal('Google Doc updated: ' + (data.result.doc_url || 'https://docs.google.com/document/d/1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM/edit'), 'text-primary font-bold');
+            logToTerminal('Gmail notification sent (Message ID: ' + (data.result.message_id || 'sent') + ') to tinapanda1410@gmail.com', 'text-primary');
           }
 
           if (data.result.pulse_prose) {
@@ -731,19 +821,15 @@ def build():
 </script>
 """
 
-    # 10. Strip existing script from stitch/code.html if present
+    # ── 12. Strip any legacy inline scripts ───────────────────────────────────
     script_pos = base_html.rfind('<script>')
-    if script_pos != -1:
-        # Check if it was at the end
-        if 'DOMContentLoaded' in base_html[script_pos:]:
-            base_html = base_html[:script_pos]
+    if script_pos != -1 and 'DOMContentLoaded' in base_html[script_pos:]:
+        base_html = base_html[:script_pos]
 
-    # Clean close tag if present
     for tag in ['</main></div></body></html>', '</body></html>']:
         if tag in base_html:
             base_html = base_html.replace(tag, '')
 
-    # Assemble final HTML
     final_html = base_html + f"\n{modal_html}\n{enhanced_script}\n</main></div></body></html>\n"
 
     out_file = PROJECT_ROOT / "index.html"
