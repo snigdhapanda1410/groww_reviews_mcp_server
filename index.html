@@ -28,10 +28,6 @@
 
   <!-- Primary Header Actions -->
   <div class="flex items-center gap-2 shrink-0">
-    <button id="dryRunHeaderBtn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-white/[0.16] text-on-surface transition-all font-body-sm text-body-sm cursor-pointer" type="button">
-      <span class="material-symbols-outlined text-[16px] text-on-surface-variant">settings</span>
-      <span>Dry Run</span>
-    </button>
     <button id="liveRunHeaderBtn" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary transition-all shadow-[0_0_16px_rgba(0,208,156,0.35)] cursor-pointer" type="button">
       <span class="material-symbols-outlined text-[16px]">rocket_launch</span>
       <span>Run Weekly Pipeline</span>
@@ -1576,23 +1572,33 @@
 <div id="pipelineModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
   <div class="relative w-full max-w-3xl bg-surface-container-low border border-white/[0.12] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.85)] overflow-hidden flex flex-col max-h-[90vh]">
     <!-- Modal Header -->
-    <div class="px-6 py-4 bg-surface-container border-b border-white/[0.08] flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <span class="relative flex h-3 w-3">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-        </span>
-        <div>
-          <h3 class="font-headline-sm text-on-surface font-semibold flex items-center gap-2">
-            <span id="modalModeTitle">Pipeline Orchestrator Console</span>
-            <span id="modalModeBadge" class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">DRY-RUN</span>
-          </h3>
-          <p class="font-telemetry-code text-telemetry-code text-outline">Groww Reviews Weekly Pulse • Model Context Protocol</p>
+    <div class="px-6 py-4 bg-surface-container border-b border-white/[0.08] flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-9 h-9 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0">
+          <span class="material-symbols-outlined text-[20px]">terminal</span>
+        </div>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2">
+            <h3 class="font-headline-sm text-body-lg text-on-surface font-semibold truncate" id="modalModeTitle">Pipeline Orchestrator Console</h3>
+            <span id="modalModeBadge" class="font-label-caps text-[10px] px-2 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/30 font-semibold uppercase tracking-wider shrink-0">PRODUCTION</span>
+          </div>
+          <p class="font-telemetry-code text-[11px] text-outline truncate">Groww Reviews Weekly Pulse • Model Context Protocol</p>
         </div>
       </div>
-      <button id="closeModalBtn" type="button" class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all cursor-pointer">
-        <span class="material-symbols-outlined text-[18px]">close</span>
-      </button>
+
+      <!-- Dry-Run Toggle & Close -->
+      <div class="flex items-center gap-3 shrink-0">
+        <label class="flex items-center gap-2 cursor-pointer select-none px-2.5 py-1.5 rounded-xl bg-surface-container-lowest border border-white/[0.08] hover:border-white/[0.16] transition-all" title="Toggle Dry-Run to simulate without updating Google Doc or emailing">
+          <input type="checkbox" id="modalDryRunToggle" class="w-3.5 h-3.5 rounded bg-surface-container-low text-secondary focus:ring-0 accent-secondary cursor-pointer" />
+          <div class="flex flex-col text-left">
+            <span class="font-body-sm text-[11px] text-on-surface font-medium leading-tight">Dry-Run Preview</span>
+            <span class="font-telemetry-code text-[9px] text-outline">Skip Doc & Mail</span>
+          </div>
+        </label>
+        <button id="closeModalBtn" type="button" class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all cursor-pointer">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
     </div>
 
     <!-- Stepper Progress Bar -->
@@ -1626,17 +1632,13 @@
     <!-- Modal Footer -->
     <div class="px-6 py-3.5 bg-surface-container border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-        <span id="modalStatusText" class="font-telemetry-code text-telemetry-code text-on-surface-variant">Ready</span>
+        <span class="h-2 w-2 rounded-full bg-primary animate-pulse" id="modalStatusDot"></span>
+        <span id="modalStatusText" class="font-telemetry-code text-telemetry-code text-on-surface-variant">Ready to execute</span>
       </div>
       <div class="flex items-center gap-2">
-        <button id="modalDryRunBtn" type="button" class="px-3.5 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.12] hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-all cursor-pointer flex items-center gap-1">
-          <span class="material-symbols-outlined text-[15px] text-on-surface-variant">settings</span>
-          <span>Dry Run</span>
-        </button>
-        <button id="modalLiveRunBtn" type="button" class="px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-semibold font-body-sm text-body-sm hover:bg-primary transition-all shadow-[0_0_12px_rgba(0,208,156,0.25)] cursor-pointer flex items-center gap-1">
-          <span class="material-symbols-outlined text-[15px]">rocket_launch</span>
-          <span>Live Run</span>
+        <button id="modalRunBtn" type="button" class="px-4 py-1.5 rounded-xl bg-primary-container text-on-primary font-semibold font-body-sm text-body-sm hover:bg-primary transition-all shadow-[0_0_12px_rgba(0,208,156,0.25)] cursor-pointer flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]" id="modalRunBtnIcon">rocket_launch</span>
+          <span id="modalRunBtnText">Run Pipeline</span>
         </button>
         <a id="modalDocLink" href="https://docs.google.com/document/d/1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM/edit" target="_blank" rel="noopener noreferrer" class="hidden px-3.5 py-1.5 rounded-xl bg-secondary text-on-secondary font-semibold font-body-sm text-body-sm hover:bg-secondary-fixed transition-all flex items-center gap-1.5">
           <span>View Google Doc</span>
@@ -1816,16 +1818,35 @@
     const modal = document.getElementById('pipelineModal');
     const modalTitle = document.getElementById('modalModeTitle');
     const modalBadge = document.getElementById('modalModeBadge');
+    const modalDryRunToggle = document.getElementById('modalDryRunToggle');
     const terminalLog = document.getElementById('terminalLog');
     const modalStatusText = document.getElementById('modalStatusText');
     const modalDocLink = document.getElementById('modalDocLink');
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modalDismissBtn = document.getElementById('modalDismissBtn');
 
-    const dryRunHeaderBtn = document.getElementById('dryRunHeaderBtn');
     const liveRunHeaderBtn = document.getElementById('liveRunHeaderBtn');
-    const modalDryRunBtn = document.getElementById('modalDryRunBtn');
-    const modalLiveRunBtn = document.getElementById('modalLiveRunBtn');
+    const modalRunBtn = document.getElementById('modalRunBtn');
+    const modalRunBtnIcon = document.getElementById('modalRunBtnIcon');
+    const modalRunBtnText = document.getElementById('modalRunBtnText');
+
+    function updateModalModeUI(isDryRun) {
+      if (modalBadge) {
+        if (isDryRun) {
+          modalBadge.innerText = 'DRY-RUN (PREVIEW)';
+          modalBadge.className = 'font-label-caps text-[10px] px-2 py-0.5 rounded-full bg-secondary/15 text-secondary border border-secondary/30 font-semibold uppercase tracking-wider shrink-0';
+        } else {
+          modalBadge.innerText = 'PRODUCTION';
+          modalBadge.className = 'font-label-caps text-[10px] px-2 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/30 font-semibold uppercase tracking-wider shrink-0';
+        }
+      }
+      if (modalRunBtnText) {
+        modalRunBtnText.innerText = isDryRun ? 'Execute Dry-Run' : 'Run Pipeline';
+      }
+      if (modalRunBtnIcon) {
+        modalRunBtnIcon.innerText = isDryRun ? 'settings' : 'rocket_launch';
+      }
+    }
 
     function logToTerminal(msg, colorClass = 'text-on-surface-variant') {
       if (!terminalLog) return;
@@ -1855,12 +1876,8 @@
       if (terminalLog) terminalLog.innerHTML = '';
       if (modalDocLink) modalDocLink.classList.add('hidden');
       if (modalStatusText) modalStatusText.innerText = 'Executing pipeline...';
-      if (modalBadge) {
-        modalBadge.innerText = isDryRun ? 'DRY-RUN' : 'LIVE';
-        modalBadge.className = isDryRun
-          ? 'font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20'
-          : 'font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20';
-      }
+      if (modalDryRunToggle) modalDryRunToggle.checked = !!isDryRun;
+      updateModalModeUI(!!isDryRun);
 
       logToTerminal(`Initiating Groww Reviews Weekly Pulse (${isDryRun ? 'Dry-Run Mode' : 'Production Mode'})...`, 'text-primary font-bold');
 
@@ -1976,10 +1993,31 @@
       }
     }
 
-    if (dryRunHeaderBtn) dryRunHeaderBtn.addEventListener('click', () => executePipeline(true));
-    if (liveRunHeaderBtn) liveRunHeaderBtn.addEventListener('click', () => executePipeline(false));
-    if (modalDryRunBtn) modalDryRunBtn.addEventListener('click', () => executePipeline(true));
-    if (modalLiveRunBtn) modalLiveRunBtn.addEventListener('click', () => executePipeline(false));
+    if (modalDryRunToggle) {
+      modalDryRunToggle.addEventListener('change', (e) => {
+        const isDry = e.target.checked;
+        updateModalModeUI(isDry);
+        logToTerminal(
+          isDry 
+            ? '[MODE] Switched to Dry-Run Preview: Remote Google Doc & Gmail calls will be simulated.' 
+            : '[MODE] Switched to Production Mode: Results will append to Google Doc and dispatch to tinapanda1410@gmail.com.',
+          isDry ? 'text-secondary font-medium' : 'text-primary font-medium'
+        );
+      });
+    }
+
+    if (liveRunHeaderBtn) {
+      liveRunHeaderBtn.addEventListener('click', () => {
+        const isDry = modalDryRunToggle ? modalDryRunToggle.checked : false;
+        executePipeline(isDry);
+      });
+    }
+    if (modalRunBtn) {
+      modalRunBtn.addEventListener('click', () => {
+        const isDry = modalDryRunToggle ? modalDryRunToggle.checked : false;
+        executePipeline(isDry);
+      });
+    }
     if (closeModalBtn) closeModalBtn.addEventListener('click', () => modal.classList.add('hidden'));
     if (modalDismissBtn) modalDismissBtn.addEventListener('click', () => modal.classList.add('hidden'));
 
