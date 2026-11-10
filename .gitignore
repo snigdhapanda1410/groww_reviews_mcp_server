@@ -5,8 +5,10 @@ venv/
 # Secrets — NEVER commit API keys
 .env
 
-# Weekly review snapshots (can be large; regenerated each run)
-data/
+# Weekly review snapshots (keep baseline snapshots, ignore dynamic ones)
+data/*
+!data/reviews_2026-11-01.json
+!data/pulse_2026-11-01.json
 
 # Python cache
 __pycache__/

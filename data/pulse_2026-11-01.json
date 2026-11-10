@@ -1,0 +1,33 @@
+{
+  "week_ending": "2026-11-01",
+  "review_count": 80,
+  "top_themes": [
+    {
+      "rank": 1,
+      "name": "UI Usability & Accessibility",
+      "description": "Feedback on the user interface, ease of use, permission settings, and overall user experience.",
+      "review_count": 11,
+      "quote": "Too much technical glitch all the time . sometimes it won't allow you to exit from the trade. This is very concerning"
+    },
+    {
+      "rank": 2,
+      "name": "Order Execution & Trading Glitches",
+      "description": "Issues where orders cannot be placed, modified, exited, or executed correctly, often causing financial loss.",
+      "review_count": 8,
+      "quote": "not good. doesn't let you modify your order in hurry."
+    },
+    {
+      "rank": 3,
+      "name": "Account Operations & Charges",
+      "description": "Concerns about account‑related processes such as IPO allotment, SIP redemption, mutual‑fund data, and brokerage fees.",
+      "review_count": 6,
+      "quote": "you can't force me to share pan card you can't force me to send 1 in your account it is wrong if I want to buy ipo i will do but you can't force me"
+    }
+  ],
+  "action_ideas": [
+    "Fix the trade exit flow by adding a persistent cancel button and reducing UI lag to ensure users can exit trades instantly.",
+    "Improve order modification speed by implementing real-time validation and a one‑tap edit option for urgent changes.",
+    "Add optional KYC document upload for IPOs, allowing users to complete purchases without mandatory PAN entry in the app."
+  ],
+  "word_count": 211
+}
