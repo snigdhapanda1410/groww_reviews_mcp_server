@@ -276,8 +276,8 @@ def build():
         <span class="font-body-md text-body-md">Feature Telemetry</span>
       </a>
       <a class="nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer" data-target="mcp-orchestration" href="#mcp-orchestration">
-        <span class="material-symbols-outlined text-[20px]">terminal</span>
-        <span class="font-body-md text-body-md">MCP Orchestrator</span>
+        <span class="material-symbols-outlined text-[20px]">hub</span>
+        <span class="font-body-md text-body-md">MCP Delivery Hub</span>
       </a>
     </nav>
   </div>
@@ -671,16 +671,9 @@ def build():
         });
         item.className = 'nav-suite-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all bg-surface-container-high text-primary font-semibold border-l-2 border-primary pl-3 cursor-pointer';
 
-        if (targetId === 'mcp-orchestration') {
-          // Open the interactive orchestrator modal directly
-          executePipeline(true);
-          const targetEl = document.getElementById('mcp-orchestration');
-          if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } else {
-          const targetEl = document.getElementById(targetId);
-          if (targetEl) {
-            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
