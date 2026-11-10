@@ -1,0 +1,44 @@
+# ─────────────────────────────────────────────────────────────
+# Groww Reviews MCP — Pipeline Configuration
+# All tuneable parameters live here. No hardcoded values in src/
+# ─────────────────────────────────────────────────────────────
+
+review:
+  app_id: "com.nextbillion.groww"   # Groww Play Store app ID
+  country: "in"                      # ISO 3166-1 alpha-2 country code
+  language: "en"                     # Review language filter
+  weeks_back: 10                     # Fetch reviews from last N weeks (8–12)
+  max_reviews: 500                   # Cap total reviews per run (avoids huge LLM prompts)
+  min_words: 8                       # Keep only reviews with > 8 words
+  strip_emojis: true                 # Remove emojis from review text
+  english_only: true                 # Filter out Hindi / Hinglish / non-English reviews
+
+llm:
+  provider: "groq"                   # "gemini" | "groq" | "openai"
+  model: "openai/gpt-oss-120b"       # Groq: "openai/gpt-oss-120b" | "qwen/qwen3.8-27b"
+  temperature: 0.2                   # Lower = more deterministic clustering
+
+pulse:
+  max_themes: 5                      # Hard cap — never more than 5 theme clusters
+  top_themes: 3                      # Number of themes to feature in the pulse
+  quotes_count: 3                    # Number of verbatim user quotes to include
+  action_ideas_count: 3              # Number of concrete next steps to generate
+  max_words: 250                     # Hard word limit for the prose pulse document
+
+mcp:
+  server_url: "https://mcpservergroww.vercel.app/mcp"
+  health_url: "https://mcpservergroww.vercel.app/health"
+  google_doc_id: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"   # Target Google Doc ID or URL to append pulse
+  docs_server: "google-workspace-mcp"   # Logical server name
+  gmail_server: "google-workspace-mcp"  # Logical server name
+
+delivery:
+  email_to: "you@example.com"           # ← REPLACE with your email / alias
+  doc_title_prefix: "Groww Weekly Pulse"
+  email_subject_prefix: "[Groww Pulse] Weekly Review Summary"
+
+output:
+  data_dir: "data"                   # Directory for review + pulse JSON snapshots
+  log_level: "INFO"                  # DEBUG | INFO | WARNING | ERROR
+  retention_snapshots: 12            # Maximum weekly snapshots to keep (older pruned automatically)
+

@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Order Execution Glitches",
+    "description": "Users face stuck orders and disappearance of the exit button during volatile trading.",
+    "review_indices": [0, 1]
+  },
+  {
+    "name": "KYC & Verification Issues",
+    "description": "KYC verification fails repeatedly and PAN fetching takes over a week.",
+    "review_indices": [2, 3]
+  },
+  {
+    "name": "Withdrawal & Payment Delays",
+    "description": "Funds take too long to reach bank account after withdrawal request.",
+    "review_indices": [4, 5]
+  },
+  {
+    "name": "UI & Usability Feedback",
+    "description": "Requests for font size increase and interface adjustments.",
+    "review_indices": [6]
+  },
+  {
+    "name": "Brokerage & Charges",
+    "description": "Hidden charges and requests for clearer tax breakdowns.",
+    "review_indices": [9]
+  }
+]
+

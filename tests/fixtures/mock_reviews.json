@@ -1,0 +1,63 @@
+[
+  {
+    "score": 1,
+    "content": "App freezes and crashes when trying to exit trades during volatility",
+    "date": "2026-10-30",
+    "version": "18.22.1"
+  },
+  {
+    "score": 1,
+    "content": "Exit button disappeared during volatile market hours causing heavy loss",
+    "date": "2026-10-29",
+    "version": "18.22.1"
+  },
+  {
+    "score": 2,
+    "content": "KYC verification fails repeatedly with CAMS statement upload",
+    "date": "2026-10-28",
+    "version": "18.21.1"
+  },
+  {
+    "score": 1,
+    "content": "Document verification took more than 7 days for PAN card details",
+    "date": "2026-10-27",
+    "version": "18.21.1"
+  },
+  {
+    "score": 2,
+    "content": "Withdrawal request stuck for 2 days without notification or credit",
+    "date": "2026-10-26",
+    "version": "18.20.1"
+  },
+  {
+    "score": 1,
+    "content": "Money deducted from wallet but not credited to bank account",
+    "date": "2026-10-25",
+    "version": "18.20.1"
+  },
+  {
+    "score": 4,
+    "content": "Good app but please add font size increase option for easy reading",
+    "date": "2026-10-24",
+    "version": "18.19.1"
+  },
+  {
+    "score": 3,
+    "content": "Charts failed to load even on good network connection in trading",
+    "date": "2026-10-23",
+    "version": "18.19.1"
+  },
+  {
+    "score": 5,
+    "content": "Great user interface and simple navigation for beginners and new investors",
+    "date": "2026-10-22",
+    "version": "18.18.1"
+  },
+  {
+    "score": 1,
+    "content": "Brokerage and tax charges are hidden and very high after transactions",
+    "date": "2026-10-21",
+    "version": "18.18.1"
+  }
+]
+

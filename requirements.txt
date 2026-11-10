@@ -1,0 +1,24 @@
+# ─────────────────────────────────────────────
+# Groww Reviews MCP — Python Dependencies
+# ─────────────────────────────────────────────
+
+# Review fetching (public, unauthenticated)
+google-play-scraper>=1.2.7
+langdetect>=1.0.9
+
+# LLM — Google Gemini (primary) — new unified SDK
+google-genai>=1.0.0
+
+# LLM — OpenAI (alternative; uncomment to use)
+# openai>=1.30.0
+
+# MCP client SDK
+mcp>=1.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# Testing
+pytest>=8.0.0
+pytest-mock>=3.14.0
