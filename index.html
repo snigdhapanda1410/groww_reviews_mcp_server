@@ -1642,23 +1642,60 @@ Groww App — Weekly Review Pulse  [week ending 2026-11-01]<br/>Reviews analysed
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // ── 1. Copy Pulse Prose Action ───────────────────────────────────────────
+    // ── 1. Copy Pulse Prose Action (Rock-Solid with Fallback) ───────────────
     const copyBtn = document.getElementById('copyPulseBtn');
     const toast = document.getElementById('copyToast');
     const briefTextEl = document.getElementById('briefProse');
 
+    function fallbackCopyText(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      ta.style.top = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      let ok = false;
+      try {
+        ok = document.execCommand('copy');
+      } catch (e) {
+        console.error('execCommand copy failed', e);
+      }
+      document.body.removeChild(ta);
+      return ok;
+    }
+
     if (copyBtn && briefTextEl) {
       copyBtn.addEventListener('click', () => {
-        navigator.clipboard.writeText(briefTextEl.innerText).then(() => {
-          if (toast) {
-            toast.classList.remove('hidden');
-            copyBtn.classList.add('bg-primary');
-            setTimeout(() => {
-              toast.classList.add('hidden');
-              copyBtn.classList.remove('bg-primary');
-            }, 3000);
-          }
-        });
+        const textToCopy = briefTextEl.innerText;
+
+        function notifyCopied() {
+          const originalHTML = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<span class="material-symbols-outlined text-[15px]">check</span><span>Copied to Clipboard!</span>';
+          copyBtn.classList.remove('bg-primary-container', 'text-on-primary');
+          copyBtn.classList.add('bg-primary', 'text-black', 'font-bold');
+          if (toast) toast.classList.remove('hidden');
+
+          setTimeout(() => {
+            copyBtn.innerHTML = originalHTML;
+            copyBtn.classList.add('bg-primary-container', 'text-on-primary');
+            copyBtn.classList.remove('bg-primary', 'text-black', 'font-bold');
+            if (toast) toast.classList.add('hidden');
+          }, 3000);
+        }
+
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(textToCopy)
+            .then(notifyCopied)
+            .catch(() => {
+              fallbackCopyText(textToCopy);
+              notifyCopied();
+            });
+        } else {
+          fallbackCopyText(textToCopy);
+          notifyCopied();
+        }
       });
     }
 
@@ -1939,6 +1976,11 @@ Groww App — Weekly Review Pulse  [week ending 2026-11-01]<br/>Reviews analysed
               if (line.trim()) logToTerminal(line, 'text-on-surface');
             });
             logToTerminal('----------------------------------------------------', 'text-outline');
+
+            // Dynamically synchronize the dashboard preview box with the newly generated prose
+            if (briefTextEl) {
+              briefTextEl.innerHTML = data.result.pulse_prose.replace(/\n/g, '<br/>');
+            }
           }
 
           logToTerminal('Pipeline execution completed successfully (Exit Code 0).', 'text-primary font-bold');
@@ -1954,24 +1996,9 @@ Groww App — Weekly Review Pulse  [week ending 2026-11-01]<br/>Reviews analysed
         clearTimeout(progressTimer2);
         clearTimeout(progressTimer3);
 
-        setStep('stepIngest', 'done');
-        setStep('stepCluster', 'done');
-        setStep('stepPulse', 'done');
-        setStep('stepDocs', 'done');
-        setStep('stepMail', 'done');
-
-        logToTerminal('Ingested 80 sanitized English reviews (PII stripped, >8 words).', 'text-primary');
-        logToTerminal('Clustered 5 themes via Groq: Order Execution, UI Usability, Charts & TA.', 'text-primary');
-        logToTerminal(f'Executive Pulse formatted: {word_count} words (Word budget <= 250 satisfied).', 'text-primary');
-        if (isDryRun) {
-          logToTerminal('[DRY-RUN] Simulated append to Google Doc: 1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM', 'text-secondary');
-          logToTerminal('[DRY-RUN] Simulated Gmail dispatch to tinapanda1410@gmail.com', 'text-secondary');
-        } else {
-          logToTerminal('Live delivery notice: ' + err.message, 'text-amber-400');
-        }
-        logToTerminal('Pipeline finished successfully!', 'text-primary font-bold');
-        if (modalStatusText) modalStatusText.innerText = 'Execution Complete (Status: Success)';
-        if (modalDocLink) modalDocLink.classList.remove('hidden');
+        logToTerminal(`[ERROR] Pipeline run encountered an issue: ${err.message}`, 'text-rose-400 font-bold');
+        logToTerminal('Verify Railway service status at /api/status or check backend logs.', 'text-outline');
+        if (modalStatusText) modalStatusText.innerText = 'Execution Failed';
       }
     }
 
