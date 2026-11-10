@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import os
 import re
 from typing import Any
 
@@ -85,7 +86,7 @@ async def send_pulse_email(
     cfg = _load_config(config_path)
     delivery_cfg = cfg.get("delivery", {})
 
-    recipient = to or delivery_cfg.get("email_to")
+    recipient = to or os.getenv("EMAIL_TO") or delivery_cfg.get("email_to")
     if not recipient or recipient.startswith("you@"):
         raise ValueError(
             "Invalid recipient email address. Provide 'to' parameter or configure "
