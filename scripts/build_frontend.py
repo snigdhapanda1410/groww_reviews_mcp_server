@@ -72,9 +72,33 @@ def build():
 
     base_html = stitch_html.read_text(encoding="utf-8")
 
-    # 1. Update Google Doc Link
+    # 1. Update Google Doc Link and ensure button is visible across all screens
     base_html = base_html.replace('href="https://docs.google.com"', f'href="{doc_url}"')
+    
+    # In TARGET GOOGLE DOC card, turn the doc ID into a clickable link to the doc
+    base_html = base_html.replace(
+        '<span class="text-primary truncate">1BxiMVs994xK_2026_W44</span>',
+        f'<a href="{doc_url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary hover:underline font-mono text-[11px] truncate cursor-pointer font-medium"><span class="truncate">{doc_id}</span><span class="material-symbols-outlined text-[13px] shrink-0">open_in_new</span></a>'
+    )
     base_html = base_html.replace("1BxiMVs994xK_2026_W44", doc_id)
+
+    # In Header: Remove hidden lg:flex so the header button is visible on mobile/tablets/laptops
+    base_html = base_html.replace(
+        'class="hidden lg:flex items-center gap-1 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all font-body-md text-body-md"',
+        'class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-surface-container-high hover:border-primary/40 text-on-surface hover:text-primary transition-all font-body-md text-body-md shadow-sm"'
+    )
+
+    # In Executive Brief: Add an Open in Google Docs button right next to Copy Pulse Prose
+    base_html = base_html.replace(
+        'id="copyPulseBtn" type="button"><span class="material-symbols-outlined text-[14px]">content_copy</span><span>Copy Pulse Prose</span></button>',
+        f'id="copyPulseBtn" type="button"><span class="material-symbols-outlined text-[14px]">content_copy</span><span>Copy Pulse Prose</span></button><a href="{doc_url}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.06] border border-white/[0.12] text-on-surface hover:text-primary hover:border-primary/40 transition-all font-headline-sm text-body-sm font-semibold shadow-sm cursor-pointer"><span class="material-symbols-outlined text-[15px] text-primary">description</span><span>Open in Google Docs</span><span class="material-symbols-outlined text-[13px] text-outline">open_in_new</span></a>'
+    )
+
+    # In Sidebar: Add an Open Google Doc link button
+    base_html = base_html.replace(
+        'Next automated scrape in 22h</p></div></aside>',
+        f'Next automated scrape in 22h</p></div><div class="pt-2"><a href="{doc_url}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container border border-white/[0.08] hover:border-primary/40 transition-all text-on-surface group cursor-pointer shadow-sm"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">description</span><span class="font-body-sm text-body-sm font-medium">Open in Google Docs</span></div><span class="material-symbols-outlined text-[14px] text-outline group-hover:text-primary">open_in_new</span></a></div></aside>'
+    )
 
     # 2. Update Header Buttons with distinct IDs
     base_html = base_html.replace(
