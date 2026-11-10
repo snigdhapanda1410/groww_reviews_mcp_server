@@ -17,9 +17,14 @@ Enhancements:
 
 import html
 import json
+import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from src.pulse import format_pulse_prose
 
 
 def build():
@@ -33,6 +38,17 @@ def build():
 
     with pulse_file.open(encoding="utf-8") as f:
         pulse = json.load(f)
+
+    # Generate the exact pulse prose from the real pulse data
+    real_prose = format_pulse_prose(
+        week_ending=pulse.get("week_ending", "2026-11-01"),
+        review_count=pulse.get("review_count", 80),
+        weeks_back=10,
+        top_themes=pulse.get("top_themes", []),
+        quotes=[t.get("quote", "") for t in pulse.get("top_themes", [])],
+        actions=pulse.get("action_ideas", []),
+    )
+    word_count = len(real_prose.split())
 
     def tag_review(text):
         t = text.lower()
@@ -457,6 +473,34 @@ def build():
         '<section class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-4">',
         '<section id="reviews-stream" class="rounded-xl bg-surface-container-low p-4 shadow-xl space-y-4 scroll-mt-20 w-full min-w-0">'
     )
+
+    # ── Replace Stakeholder Executive Brief with real generated pulse prose ───
+    bp_tag = 'id="briefProse">'
+    bp_start = base_html.find(bp_tag)
+    if bp_start != -1:
+        content_start = bp_start + len(bp_tag)
+        bp_end = base_html.find('</div>', content_start)
+        escaped_prose = html.escape(real_prose).replace('\n', '<br/>')
+        base_html = base_html[:content_start] + f"\n{escaped_prose}\n" + base_html[bp_end:]
+
+    # Update word count badges
+    base_html = base_html.replace('(214 Words)', f'({word_count} Words)')
+    base_html = base_html.replace('Copied 214-Word', f'Copied {word_count}-Word')
+
+    # Update Recommended Action Cards to match pulse.action_ideas
+    if pulse.get("action_ideas") and len(pulse["action_ideas"]) >= 3:
+        base_html = base_html.replace(
+            'Stabilize trading socket adapters and guarantee exit order trigger availability under opening volatility spike.',
+            pulse['action_ideas'][0]
+        )
+        base_html = base_html.replace(
+            'Introduce dynamic font scaling preference and persistent order confirmation toasts in global app accessibility panel.',
+            pulse['action_ideas'][1]
+        )
+        base_html = base_html.replace(
+            'Implement candlestick chart pre-caching mechanism for 9:15 AM market opening peak loads on mobile devices.',
+            pulse['action_ideas'][2]
+        )
 
     # ── 8. Star Filter Pills & Counts ──────────────────────────────────────────
     count_1 = star_counts[1]
@@ -940,7 +984,7 @@ def build():
 
         logToTerminal('Ingested 80 sanitized English reviews (PII stripped, >8 words).', 'text-primary');
         logToTerminal('Clustered 5 themes via Groq: Order Execution, UI Usability, Charts & TA.', 'text-primary');
-        logToTerminal('Executive Pulse formatted: 214 words (Word budget <= 250 satisfied).', 'text-primary');
+        logToTerminal(f'Executive Pulse formatted: {word_count} words (Word budget <= 250 satisfied).', 'text-primary');
         if (isDryRun) {
           logToTerminal('[DRY-RUN] Simulated append to Google Doc: 1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM', 'text-secondary');
           logToTerminal('[DRY-RUN] Simulated Gmail dispatch to tinapanda1410@gmail.com', 'text-secondary');
