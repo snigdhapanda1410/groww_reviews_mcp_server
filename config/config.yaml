@@ -33,7 +33,7 @@ mcp:
   gmail_server: "google-workspace-mcp"  # Logical server name
 
 delivery:
-  email_to: "you@example.com"           # ← REPLACE with your email / alias
+  email_to: "tinapanda1410@gmail.com"
   doc_title_prefix: "Groww Weekly Pulse"
   email_subject_prefix: "[Groww Pulse] Weekly Review Summary"
 

@@ -81,6 +81,7 @@ def build():
         f'<a href="{doc_url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary hover:underline font-mono text-[11px] truncate cursor-pointer font-medium"><span class="truncate">{doc_id}</span><span class="material-symbols-outlined text-[13px] shrink-0">open_in_new</span></a>'
     )
     base_html = base_html.replace("1BxiMVs994xK_2026_W44", doc_id)
+    base_html = base_html.replace("stakeholders@groww.in", "tinapanda1410@gmail.com")
 
     # In Header: Remove hidden lg:flex so the header button is visible on mobile/tablets/laptops
     base_html = base_html.replace(
@@ -710,7 +711,7 @@ def build():
         logToTerminal('Executive Pulse formatted: 214 words (Word budget <= 250 satisfied).', 'text-primary');
         if (isDryRun) {
           logToTerminal('[DRY-RUN] Simulated append to Google Doc: 1CQmm-g8D41RmTRKwIsGow2eNksmJBEaVvMVrt64abpM', 'text-secondary');
-          logToTerminal('[DRY-RUN] Simulated Gmail dispatch to stakeholders@groww.in', 'text-secondary');
+          logToTerminal('[DRY-RUN] Simulated Gmail dispatch to tinapanda1410@gmail.com', 'text-secondary');
         } else {
           logToTerminal('Live delivery notice: ' + err.message, 'text-amber-400');
         }

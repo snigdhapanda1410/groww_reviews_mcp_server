@@ -218,7 +218,7 @@ def run_pipeline(
 
     # ── Stage 5: MCP Gmail Delivery (with EC-35 partial failure handling) ────
     delivery_cfg = cfg.get("delivery", {})
-    recipient = os.getenv("EMAIL_TO") or delivery_cfg.get("email_to", "you@example.com")
+    recipient = os.getenv("EMAIL_TO") or delivery_cfg.get("email_to", "tinapanda1410@gmail.com")
     email_result: dict[str, Any] = {}
     message_id: str | None = None
 
