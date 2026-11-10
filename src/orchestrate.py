@@ -193,7 +193,7 @@ def run_pipeline(
     logger.info("Stage 3 complete: Pulse formatted successfully (%d words, limit <= 250).", word_count)
 
     # ── Stage 4: MCP Google Docs Delivery ─────────────────────────────────────
-    doc_id = cfg.get("mcp", {}).get("google_doc_id", "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms")
+    doc_id = os.getenv("GOOGLE_DOC_ID") or cfg.get("mcp", {}).get("google_doc_id", "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms")
     doc_url: str | None = None
     docs_result: dict[str, Any] = {}
 
@@ -218,7 +218,7 @@ def run_pipeline(
 
     # ── Stage 5: MCP Gmail Delivery (with EC-35 partial failure handling) ────
     delivery_cfg = cfg.get("delivery", {})
-    recipient = delivery_cfg.get("email_to", "you@example.com")
+    recipient = os.getenv("EMAIL_TO") or delivery_cfg.get("email_to", "you@example.com")
     email_result: dict[str, Any] = {}
     message_id: str | None = None
 

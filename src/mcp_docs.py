@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import os
 from typing import Any
 
 from src.mcp_client import DeliveryError, MCPError, _load_config, call_mcp_tool
@@ -48,7 +49,7 @@ async def append_pulse_to_doc(
     """
     if not document_id:
         cfg = _load_config(config_path)
-        document_id = cfg.get("mcp", {}).get("google_doc_id")
+        document_id = os.getenv("GOOGLE_DOC_ID") or cfg.get("mcp", {}).get("google_doc_id")
         if not document_id or document_id.startswith("YOUR_"):
             raise ValueError(
                 "No target Google Doc ID configured. Provide document_id or set "
