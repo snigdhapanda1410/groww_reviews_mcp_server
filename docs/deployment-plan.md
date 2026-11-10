@@ -65,7 +65,7 @@ flowchart TD
 
 | Component | Platform | Deployment Type | Entry Point | Public URL / Port |
 |---|---|---|---|---|
-| **Backend API** | **Railway** | Nixpacks Python 3.11 Web Service | `python src/serve.py` | `https://groww-reviews-backend.up.railway.app` |
+| **Backend API** | **Railway** | Nixpacks Python 3.11 Web Service | `python src/serve.py` | `https://growwreviewsmcpserver-production.up.railway.app` |
 | **Scheduled Pipeline** | **Railway** | Cron Worker (Every Mon 07:30 IST) | `python src/orchestrate.py` | Internal (Background Worker) |
 | **Frontend UI** | **Vercel** | Static Site + API Rewrites | `index.html` + `vercel.json` | `https://groww-reviews-pulse.vercel.app` |
 | **Remote MCP Server** | **Vercel** | Serverless Streamable HTTP | Python/TypeScript MCP | `https://mcpservergroww.vercel.app/mcp` |
@@ -146,7 +146,7 @@ To preserve weekly JSON review and pulse snapshots across deployments and levera
 3. Railway automatically detects `railway.json` and Nixpacks Python builder.
 4. Go to **Variables** tab and add `GEMINI_API_KEY` and `HOST=0.0.0.0`.
 5. Go to **Settings → Networking** and click **Generate Domain**.
-   * Example generated URL: `https://groww-reviews-backend.up.railway.app`
+   * Live backend URL: `https://growwreviewsmcpserver-production.up.railway.app`
 6. Wait for build to complete. The health check (`/api/status`) will verify the service.
 
 #### Method B: Deploy via Railway CLI
