@@ -75,9 +75,32 @@ def build():
 
     base_html = stitch_html.read_text(encoding="utf-8")
 
-    # ── 1. Global Box-Sizing & Viewport Fix (Prevents Horizontal Scroll blowout) ──
+    # ── 1. Global Box-Sizing, Visible Custom Scrollbar & Icon Ligatures ──────────
     old_style = '<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>'
-    new_style = '<style>@layer base{*,*::before,*::after{box-sizing:border-box;}html,body{margin:0;padding:0;width:100%;max-width:100vw;overflow-x:hidden;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>'
+    new_style = (
+        '<style>'
+        '@layer base{'
+        '*,*::before,*::after{box-sizing:border-box;}'
+        'html{overflow-y:scroll;scroll-behavior:smooth;}'
+        'html,body{margin:0;padding:0;width:100%;max-width:100vw;overflow-x:hidden;}'
+        'body{overscroll-behavior:none;}'
+        'main>:first-child{margin-top:0!important;}'
+        'main>:last-child{margin-bottom:0!important;}'
+        '}'
+        '::-webkit-scrollbar{width:10px;height:10px;}'
+        '::-webkit-scrollbar-track{background:#0a0e16;}'
+        '::-webkit-scrollbar-thumb{background:#262a33;border-radius:5px;border:2px solid #0a0e16;}'
+        '::-webkit-scrollbar-thumb:hover{background:#44edb7;}'
+        '* {scrollbar-width:thin;scrollbar-color:#262a33 #0a0e16;}'
+        '.material-symbols-outlined{'
+        'font-family:"Material Symbols Outlined" !important;'
+        'font-weight:normal;font-style:normal;font-size:20px;line-height:1;letter-spacing:normal;'
+        'text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;'
+        '-webkit-font-feature-settings:"liga";font-feature-settings:"liga";-webkit-font-smoothing:antialiased;'
+        'vertical-align:middle;'
+        '}'
+        '</style>'
+    )
     base_html = base_html.replace(old_style, new_style)
 
     # ── 2. Header Layout: Clean & Compact (Fits all screens at 100% zoom) ─────────
@@ -523,6 +546,24 @@ def build():
         });
       });
     }
+
+    // ── Recommended PM Actions Interactive Checkboxes ───────────────────────
+    const actionCheckboxes = document.querySelectorAll('input[type="checkbox"][class*="accent-primary"]');
+    actionCheckboxes.forEach(cb => {
+      cb.addEventListener('change', (e) => {
+        const parentLabel = e.target.closest('label');
+        const textSpan = parentLabel ? parentLabel.querySelector('span') : null;
+        if (textSpan) {
+          if (e.target.checked) {
+            textSpan.innerText = 'Sprint 148 / Jira';
+            textSpan.className = 'text-primary font-medium';
+          } else {
+            textSpan.innerText = 'Add to Backlog';
+            textSpan.className = 'text-outline';
+          }
+        }
+      });
+    });
 
     // ── 2. Sidebar Navigation & Smooth Scroll ────────────────────────────────
     const navItems = document.querySelectorAll('.nav-suite-item');
